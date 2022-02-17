@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actividades>
+  <actividad nivel="infantil">
+    <codigo>A01
+    </codigo>
+    <titulo>Al agua patos
+    </titulo>
+    <fecha_inicio>2017-01-15
+    </fecha_inicio>
+    <sesiones intensidad="suave"> 	
+      <minutos_sesion>45
+      </minutos_sesion>
+      <sesiones_semana>3
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+  <actividad nivel="adultos">
+    <codigo>A02
+    </codigo>
+    <titulo>Spinning y agua
+    </titulo>
+    <fecha_inicio>2017-01-08
+    </fecha_inicio>
+    <sesiones intensidad="fuerte"> 			
+      <minutos_sesion>45
+      </minutos_sesion>
+      <sesiones_semana>3
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+  <actividad nivel="adultos">
+    <codigo>A03
+    </codigo>
+    <titulo>Spinning en el agua
+    </titulo>
+    <fecha_inicio>2017-01-15
+    </fecha_inicio>
+    <sesiones intensidad="moderada"> 			
+      <minutos_sesion>60
+      </minutos_sesion>
+      <sesiones_semana>2
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+  <actividad nivel="infantil">
+    <codigo>A04
+    </codigo>
+    <titulo>Socorrismo
+    </titulo>
+    <fecha_inicio>2017-02-15
+    </fecha_inicio>
+    <sesiones intensidad="moderada"> 			
+      <minutos_sesion>45
+      </minutos_sesion>
+      <sesiones_semana>2
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+  <actividad nivel="infantil">
+    <codigo>A05
+    </codigo>
+    <titulo>Perfeccionamiento en el agua
+    </titulo>
+    <fecha_inicio>2017-02-15
+    </fecha_inicio>
+    <sesiones intensidad="moderada"> 			
+      <minutos_sesion>45
+      </minutos_sesion>
+      <sesiones_semana>2
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+  <actividad nivel="adultos">
+    <codigo>A06
+    </codigo>
+    <titulo>Aprender a nadar
+    </titulo>
+    <fecha_inicio>2017-03-15
+    </fecha_inicio>
+    <sesiones intensidad="suave"> 			
+      <minutos_sesion>30
+      </minutos_sesion>
+      <sesiones_semana>2
+      </sesiones_semana>
+    </sesiones>
+  </actividad>
+</actividades>
