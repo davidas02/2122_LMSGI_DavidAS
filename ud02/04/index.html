@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+        Descripcion: Formulario mountain bike. Ejercicio 3 - unidad 2 LMSGI
+        Autor: David Aparicio Sir
+        Fecha creación: 31/10/2021
+        Última modificación: 31/10/2021
+        Estos ejercicios son prestados de Ricardo
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML 03 Ricardo ST</title>
+        <!--reset comentado porque da problemas-->
+        <!--<link rel="stylesheet" href="css/reset.css" />-->
+        <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+        <link href="css/fonts.css"  rel="stylesheet"  type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="author" content="Ricardo Santiago Tomé">
+        <meta name="application-name" content="MULTIMEDIA HTML">
+        <meta name="description" content="MULTIMEDIA HTML">
+        <meta name="keywords" content="BTT,MTB,media,multimedia,video,videos,imagen,images,imagenes,audio,html,css" >
+        <meta name="robots" content="index,nofollow">
+        <!--<meta http-equiv="refresh" content="180">-->
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header>
+            <h1>MULTIMEDIA y BTT</h1>
+            <h2>Historia de una medalla inesperada</h2>
+        </header>
+        <main>
+            <div id="audio">
+                <h3>Audio momentos</h3>
+                <div class="divAudio">
+                    <div class="primera">
+                        <div>
+                            <figure id="figurePrimera">
+                                <img class="imagen"  src="media/imagen/BH.jpg" width="350" alt="Declaraciones de David Valero sobre su preparación y estado de forma antes de viajar a Tokio."/>
+                                <figcaption>Equipo BH Templo cafés(De izquierda a derecha)<br>
+                                    David Valero, Pablo Rodríguez, Carlos Coloma, Rocío del Alba
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="audioPrimera">
+                            <aside>En este audio, el de Baza habla de la importancia de la planificación<br> y preparación específica para estos juegos olímpicos.<br>
+                                En esta preparación han sido claves sus compañeros del BH Templo cafés</aside>
+                            <audio controls class="audio" id="audioPrimera">
+                                <!--En audio también se puede poner como fuente del archivo una url remota-->
+                                <source  src="https://dpvclip.antena3.com/mp_audios4//2021/07/26/D0C8631D-6473-4ED7-87E1-1E776D14B096/D0C8631D-6473-4ED7-87E1-1E776D14B096.mp3#t=00,45"  type="audio/mpeg">
+                                <!--Añadiendo #t=00,45 logro que reproduzca desde el segundo 0 del audio al segundo 45 y se pause. Para volver a reproducirlo, habría que volver a dar play.-->
+                                <source src="media/audio/entrevista.mp3#t=00,45" type="audio/mpeg">
+                                <source src="media/audio/entrevista.ogg#t=00,45" type="audio/ogg">
+                                <source src="media/audio/entrevista.wav#t=00,45" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="divAudio">
+                    <div><!--Hay  otra manera de colocar el audio a la derecha de la imagen, solo hay
+                        que invertir el orden en que aparecen sus etiquetas-->
+                        <div>
+                            <figure id="figureMedio">
+                                <img class="imagen" id="imagenMedio" src="media/imagen/DavidValero.jpg" width="350" alt="David Valero eufórico entrando a meta en tercera posición en los juegos olímpicos de Tokyo en modalidad BTT"/>   
+                                <figcaption>El momento del éxtasis: David Valero Serrano ya es bronce olímpico.<br>
+                                    Acaba de tener lugar un momento histórico para el Mountain Bike en España.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="audioSegunda">
+                            <aside>Emocionante narración del instante que recoje la imagen lateral.<br>
+                                Los bikers de mañana son los niños que hoy miran con asombro la hazaña del granadino David Valero</aside>
+                            <audio controls class="audio" id="audioMedio">
+                                <source src="media/audio/Valerometa.mp3" type="audio/mpeg">
+                                <source src="media/audio/Valerometa.ogg" type="audio/ogg">
+                                <source src="media/audio/Valerometa.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="divAudio">
+                    <div>
+                        <div>
+                            <figure id="figureFinal">
+                                <img class="imagen" src="media/imagen/Valerovictorioso.jpg" width="350" alt="David Valero recibiendo la medalla de bronce por su tercer puesto en Mountain Bike olímpico en Tokyo 2021"/>
+                                <figcaption>
+                                    Recién galardonado con la medalla que acaba de ganar.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="audioSegunda">
+                            <aside>Como tantos otros medios, esta radio se hizo eco de la noticia.<br>
+                                En la esfera pública y publicada todo el mundo quiere acercarse a los medallistas olímpicos.<br>
+                                Las más de las veces para intentar "impregnar" su propia figura con los valores que desprenden los olímpicos.</aside>
+                            <audio controls class="audio">
+                                <source src="media/audio/medalla.mp4" type="audio/mpeg">
+                                <source src="media/audio/medalla.ogg" type="audio/ogg">
+                                <source src="media/audio/medalla.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Vídeos para la historia del BTT español</h3>
+                <div id="video">
+                    <div class="videoIframe"><!--El siguiente iframe está copiado tal cual de Youtube (salvo el atributo frameborder, que no valida)el resto valida en la W3c pero da muchos warning en netbeans. 
+                                             Aún así, funciona correctamente.Añadiendo ?start=115 al final de la url, le estoy diciendo que empiece la reproducción del video a partir del segundo 115-->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dJB2I28AZeY?start=115" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="pPrimera">Entrevista a David Valero después de un día de entrenamiento en su Baza natal.</p>
+                        <!--Demostración palmaria de como el atributo video no es adecuado para un video online ( al menos para las plataformas Youtube y Vimeo que son 
+                        las que yo he testado. Basta descomentar el elemento video que está debajo y comentar el iframe superior(ambos con la misma url) para ver quien es
+                        el que está trabajando y quien no tiene sentido para esta función.-->
+                        <!--<video>
+                            <source src="https://www.youtube.com/embed/dJB2I28AZeY">
+                        </video>-->
+                    </div>
+                    <div class="videoIframe">
+                        <!--atributos básicos que no dan ningún warning en netbeans ni al hacer "inspeccionar" desde el navegador. Y funciona igual si se visualiza en formato escritorio
+                        .Queda comprobar como se comporta en (por ejemplo) un smartphone real, en la simulación de netbeans lo hace bien, así que esperaremos a subirlo a un servidor
+                        y consultarlo desde el dispositivo real. Dejo añadido ?loop=1 no hace que el loop funcione-->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-FtP79Rglhs?loop=1" title="YouTube video player" name="segundoVideo"></iframe>
+                        <p class="pPrimera">Este video no está roto, consta de una imagen fija, un audio y su correspondiente subtitulado.<br>Recoje el momento en que el asistente mecánico del equipo BH<br>
+                            motiva a su compañero Valero recordándole el motivo principal por el que luchar.</p>
+                    </div>
+                    <div class="videoIframe">
+                        <!--Video desde facebook, aquí con todos los atributos que tiene al copiar el código embebido, como se puede observar, el autoplay no funciona.-->
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FRFECiclismo%2Fvideos%2F806512966674189%2F&show_text=0&width=261"  width="261" height="476" style="border:none;overflow:hidden"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        <p class="pPrimera">David Valero agradeciendo el apoyo tras bajar del podio de campeones.<br>
+                            Vídeo de Facebook. Nótese que los controles son distintos,<br>
+                            son así establecidos al pegar la dirección embebida<br>
+                            proporcionada por Facebook</p>
+                    </div>
+                    <div  class="videoIframe" id="offline">
+                        <iframe id="rodandoIframe" width="560" height="315" src="media/video/rodando.mp4"></iframe>
+                        <p id="pUltima">Grupeta rodando<br>
+                            Arriba: Formato de Iframe aplicado a un archivo en local.<br>
+                            Abajo: Formato video para misma fuente de video en local</p>
+                        <video id="rodandoVideo" width="560" height="315" controls><!--Sin el atributo controls, nos muestra una imagen estática. Si se le añade el atributo loop
+                            no valida pero funciona-->
+                            <source src="media/video/rodando.mp4" type="video/mp4">
+                            <source src="media/video/rodando.webm" type="video/webm">
+                            <source src="media/video/rodando.ogg" type="video/ogg">
+                            Your browser does not suppoort the video element.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <h3>Fotogalería</h3>
+            <div id="image">
+                    <img src="media/imagen/llanto.jpg" alt="Llanto de felicidad para el corredor David Valero" id="llanto" width="250"/>
+                    <img src="https://www.esciclismo.com/actualidad/imagenes/a/david-valero-entrno-jjoo-tokio-2-2021-rfec-press.jpg" width="250" alt="David Valero rodando en el circuito XCO de Tokyo 2020" id="bajando"/>
+                    <img src="media/imagen/celebrando.jfif" alt="David Valero recibido por su familia" id="familia" width="250"/>
+                    <img src="media/imagen/banderas.jfif" alt="En Baza, granada, paisanos recibiendo a David Valero" id="banderas" width="250"/>
+            </div>
+        </main>
+        <footer>
+            <address>"2021-22  IES LOS SAUCES. ©Todos los derechos reservados.<a href="mailto:ricardo.santom@educa.jcyl.es" target="_top">Ricardo Santiago Tomé"</a></address>
+        </footer>
+    </body>
+</html>

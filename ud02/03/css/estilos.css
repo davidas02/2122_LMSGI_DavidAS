@@ -1,0 +1,217 @@
+/* 
+    Created on : 01/11/2021
+    Author     : Ricardo Santiago Tomé
+*/
+html{
+    text-justify: distribute;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: max-content;
+}
+body{
+    box-sizing: border-box;
+    background-image:url(../images/ondas.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:#FFDFD3;
+    height:auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    position: absolute;
+}
+/*Añado este media querie para hacer responsive la página. En el caso de pantallas
+con un tamaño máximo como el especificado, cargará esta imagen a la ya he cambiado
+previamente de tamaño para que tenga una visualización optimizada y menor peso
+en dispositivos pequeños.Amor, me estoy haciendo responsive (a la vejez viruelas...)*/
+@media only screen and(max-width:767px){
+    body{
+        background-image: url(../images/ondas-mobile.jpg)
+    }
+}
+#password{
+    font-family: monospace;
+    margin: 1em 1em 0.5em 6em;
+    transform-style: preserve-3d;
+}
+#demo1{
+    margin: 1em 1em 0 3.5em;
+}
+form{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50em;
+}
+fieldset{
+    background-color:lightsteelblue;
+    margin:0.35em;
+    min-width: 30em;
+}
+/*Me vas a decir que intente no aplicar estilos a etiquetas tan genéricas como las de los títulos
+, tienes razón, pero en este caso concreto y teniendo en cuenta que no se va a modificar,
+he decido implementarlo así*/
+h1{text-align: center;
+   margin-top: 1.5%;
+   margin-bottom: 1.5%;
+   min-width: 500px;
+   color: navy;
+}
+h2{
+    margin-left: 6.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: underline;
+    color:navy;
+    min-width:300px;
+}
+/*A continuación el input que muestra las rayas asignadas a valores en los input de tipo range*/
+input[type="range"]::after{
+                content: attr(value);
+}
+/*Este input con focus hace que al tener seleccionado un input, este reciba los
+atributos css declarados aquí dentro. Dos curiosidades, me dan warning en netbeans el linear-gradient
+y la especificación rgba() aunque los dos los implementa bien y validan en w3c validator*/
+input:focus {
+  background-image: linear-gradient(to right, rgba(252, 243, 207), rgba(241, 196, 15));
+  border: 10px;
+  border-bottom-style: solid;
+  border-color: rgba(136, 78, 160) ;
+}
+#tituloDatos{
+    background-color: lightsteelblue;
+    width:15%;
+}
+#datos{background-color: #FEF9E7;}
+#nombre,#apellido,#masculino,#femenino,#otro,#idWeek,#idtel,#idtel2,#email{
+        background-color: rgba(252, 243, 207);}
+/*input{background-image: linear-gradient(to left, rgba(249, 231, 159 ), rgba(237, 187, 153 ));}*/
+.datos,.email{
+    margin-left: 5em;
+    flex-direction: column;
+    justify-content: center;
+}
+#nombreee{display:flex;
+          float:left;
+}
+#apellidosss{
+    display:inline-block;
+    margin-left: 13em;
+}
+.telefono{display:flex;}
+#telefono1{float:left;}
+#telefono1,#telefono2{
+    width: 40%;
+    margin-left: 5em;
+    background-color: bisque;
+    backface-visibility: visible;
+}
+#fechaNac{
+    display:inline;
+    width:20%;
+    background-color: #FCF3CF;
+}
+#preferencias{background-color: lightsteelblue ;}
+#tituloPreferencias{
+    background-color: #FCF3CF;
+    width: 20%;
+}
+.preferencias{
+    display:inline-block;
+    text-align: center;
+    background-color: #FCF3CF ;
+    width:40%;
+    min-width: 5em;
+    padding-left: 5em;
+}
+#fechaHora{height: 40px;
+           text-align-last: center;}
+.fechaHora{
+    margin: 5em;
+}
+#varios{background-color: #F9E79F;}
+#tituloCajon{
+    background-color: lightsteelblue;
+    width:15%;
+}
+.UCI{
+    display:inline-flex;
+    text-align: center;
+    background-color: #F9E79F;
+    width:18%;
+    min-width: 5em;
+    margin-right: 10em;
+    flex-direction: column;
+    justify-content: center;
+}
+#UCI{margin-left: 5em;}
+#opinion{
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+}
+.bici{display:inline-block;
+    text-align: center;
+    background-color: lightsteelblue;
+    min-width: 5em;
+    margin: 0.5em;
+    width: 98.5%;
+    min-height:12em;
+}
+#BTT,#color{
+    display:inline-flex;
+    text-align: center;
+    background-color: #F9E79F;
+    min-width: 5em;
+    flex-direction: column;
+}
+#BTT{margin-right: 5em;margin-top: 3em;}
+#color{margin-left:5em;}
+.final{
+    display:inline-block;
+    text-align: center;
+    background-color: lightsteelblue;
+    min-width: 5em;
+    margin: 0.5em;
+    width: 98.5%;
+    min-height:6em;
+}
+#medios,#foto{
+    display:inline-flex;
+    text-align: center;
+    background-color: #F9E79F;
+    min-width: 5em;
+    flex-direction: column;
+}
+#primeraMarca{}
+#botones{background-color:#D4AC0D;}
+#botonAzul,#botonReset{
+    width:150px;
+    height:50px;
+    margin: 1em 1em 1em 0;
+}
+#botonAzul{background-color:lightsteelblue;}
+#botonReset{background-color:lightgreen;}
+footer{margin-left: 5em;}

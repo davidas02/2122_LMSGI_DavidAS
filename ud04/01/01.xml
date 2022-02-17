@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email[
+   <!ELEMENT email (remitente,destinatarios,fecha,asunto,mensaje?,ficheros?)>
+   <!ATTLIST email
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+    <!ELEMENT remitente (#PCDATA)>
+   <!ELEMENT destinatarios (destinatario+)>
+   <!ELEMENT destinatario (#PCDATA)>
+   <!ELEMENT fecha (#PCDATA)>
+   <!ELEMENT asunto (#PCDATA)>
+   <!ELEMENT mensaje (#PCDATA)>
+   <!ELEMENT ficheros (fichero+)>
+   <!ELEMENT fichero (nombre,type)>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT type (#PCDATA)>
+]>
+<email
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='01.xsd'>
+    <remitente>
+        david.apasir@educa.jcyl.es
+    </remitente>
+    <destinatarios>
+        <destinatario>
+            marodriguezn@educa.jcyl.es
+        </destinatario>
+        <destinatario>
+            hramoso@educa.jcyl.es
+        </destinatario>
+    </destinatarios>
+    <fecha>
+        2022-01-20
+    </fecha>
+    <asunto>
+        practicas xml
+    </asunto>
+    <mensaje>
+        Aqui está la practica 01 de xml
+    </mensaje>
+    <ficheros>
+        <fichero>
+            <nombre>
+                01.xml
+            </nombre>
+            <type>
+                application/xml
+            </type>
+        </fichero>
+        <fichero>
+            <nombre>
+                02.xml
+            </nombre>
+            <type>
+                application/xml
+            </type>
+        </fichero>
+    </ficheros>
+</email>

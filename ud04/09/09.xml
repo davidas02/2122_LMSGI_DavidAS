@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE textos[
+<!ELEMENT textos (texto)*>
+<!ATTLIST textos
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT texto (#PCDATA)>
+<!ENTITY escritor "Miguel de Cervantes">
+<!ENTITY obra "El Quijote">
+<!ENTITY fecha "29/09/1547">
+]>
+
+<textos  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='09.xsd'>
+    <texto>
+        &obra; fue escrito por &escritor;
+    </texto>
+    <texto>&escritor; nació el &fecha;</texto>
+</textos>

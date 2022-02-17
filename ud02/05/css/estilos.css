@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 nov. 2021, 11:57:55
+    Author     : Usuario
+*/
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  position: relative;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
+div{
+    width: 210px;
+    height:210px;
+    border:10px solid black;
+    display:inline-block;
+    margin: 5px;
+    padding:5px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+div:nth-child(1){
+    background-image:url("../images/punto.png");
+    background-position: center center;
+}
+div:nth-child(2){
+    background-image:url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left;
+}
+div:nth-child(3){
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,center center;
+}
+div:nth-child(4){
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right;
+}
+div:nth-child(5){
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right,center center;
+}
+div:nth-child(6){
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right,left center,right center;
+}

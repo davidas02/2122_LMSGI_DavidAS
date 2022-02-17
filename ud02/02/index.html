@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--
+        Descripcion: Primer ejercicio
+        Autor: David Aparicio Sir
+        Fecha creación/modificación: 7/10/2021
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML02</title>
+        <!--reset comentado porque da problemas-->
+        <!--<link rel="stylesheet" href="css/reset.css" />-->
+        <link rel="stylesheet" href="css/estilos.css"/>
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            body{background-color:#F2F4F4;}
+            #headerPrincipal{
+                display:inline;
+				text-align:center;
+                float:left;
+                padding-top:20px;
+            }
+            #imagen{
+                display:inline;
+                float:right;
+                padding-right:120px;
+                padding-top:30px;
+            }
+            #navegacion{
+                padding-top:180px;
+                list-style-type:none;
+            }
+            nav{
+                padding-top:20px;
+                padding-bottom:30px;
+            }
+            ul{padding-left:25%;}
+            li{
+                display:inline;
+                float:left;
+            }
+            li > a{
+                margin-right:0.5em;
+                font-size:1.5em}
+            table{
+                width:100%;
+                margin-top:30px;
+            }
+            table,tr,td,th,caption{
+                border:1px black;
+                border-style:solid;
+                border-collapse:collapse;
+            }
+            .tabla{
+                text-align:center;
+            }
+            caption{
+                font-family:cursive;
+                letter-spacing:1.25em;
+            }
+            .horas{
+                background-color:lightgray;
+                height:85px;
+                width:100px;
+            }
+            .dias{
+                background-color:lightsteelblue;
+            }
+            .lmsgi{
+                background-color:salmon;
+            }
+            .edd{
+                background-color:lightyellow;
+            }
+            .bdd{
+                background-color:lime;
+            }
+            .prog{
+                background-color:#76D7C4;
+            }
+            .fol{
+                background-color:#FAD7A0;
+            }
+            .sinf{
+                background-color:lightgreen;
+            }
+            .footerArticulos{	
+                font-size:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="headerPrincipal">
+                <h1>"HORARIO ESCOLAR CURSO 2021-22”</h1>
+            </div>
+            <div id="imagen">
+                <figure>
+                    <a href="http://ieslossauces.centros.educa.jcyl.es/sitio/">
+                        <img height="100" src="images/ies_los_sauces.jpg" alt="Logo del IES Los Sauces" id="logo">
+                    </a>
+                    <figcaption>Logo y link del IES Los Sauces. Original por
+                        <a href="http://ieslossauces.centros.educa.jcyl.es/sitio/upload/img/logotiposauces_TRANSPARENTE.PNG">IES Los Sauces</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </header>
+        <aside>
+            <nav>
+                <ul id="navegacion">
+                    <li>
+                        <a href="#Horario">Horario</a>
+                    </li>
+                    <li>
+                        <a href="#LMSGI">LMSGI</a>
+                    </li>
+                    <li>
+                        <a href="#BD">BD</a>
+                    </li>
+                    <li>
+                        <a href="#Programación">Programación</a>
+                    </li>
+                    <li>
+                        <a href="#Entornos">Entornos</a>
+                    </li>
+                    <li>
+                        <a href="#Sistemas">Sistemas</a>
+                    </li>
+                    <li>
+                        <a href="#FOL">FOL</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <header>
+                    <h2>CICLO FORMATIVO Desarrollo de Aplicaciones Web</h2>
+                </header>
+                <article id="Horario">
+                    <header>
+                        <h3>Curso:1º Grupo: DAW1</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <!--Dejo aquí comentado la ocurrencia del conflicto de colgroup con thead. Al parecer
+                        la columna ha de ir completa en el tbody-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2" class="lmsgi"><strong>Len Marcas Sist Ges I</strong><br><abbr title="AMOR RODRIGUEZ NAVARRO"><i>ARIF</i></abbr></td>
+                                <td rowspan="2" class="edd"><strong>EDD</strong><br><abbr title="JAVIER COQUE GARCIA"><i>JCIF</i></abbr></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2" class="fol"><strong>Formación Orient La</strong><br><abbr title="MARIA ENRIQUETA GONZALEZ CARNERO"><i>MGFO</i></abbr></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2" class="lmsgi"><strong>Len Marcas Sist Ges I</strong><br><abbr title="AMOR RODRIGUEZ NAVARRO"><i>ARIF</i></abbr></td>
+                                <td class="edd"><strong>EDD</strong><br><abbr title="JAVIER COQUE GARCIA"><i>JCIF</i></abbr></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td class="fol"><strong>Formación Orient La</strong><br><abbr title="MARIA ENRIQUETA GONZALEZ CARNERO"><i>MGFO</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Tutor. Javier Coque García</strong></p>
+                    </footer>
+                </article>
+                <article id="LMSGI">
+                    <header>
+                        <h3>Lenguaje de marcas y sistemas de gestión de la información</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2" class="lmsgi"><strong>Len Marcas Sist Ges I</strong><br><abbr title="AMOR RODRIGUEZ NAVARRO"><i>ARIF</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="lmsgi"><strong>Len Marcas Sist Ges I</strong><br><abbr title="AMOR RODRIGUEZ NAVARRO"><i>ARIF</i></abbr></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor. Amor Rodríguez Navarro</strong></p>
+                    </footer>
+                </article>
+                <article id="BD">
+                    <header>
+                        <h3>Bases de datos</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="bdd"><strong>BDD</strong><br><abbr title="HERMELINDA RAMOS OSORIO"><i>MELI</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor. Hermelinda Ramos Osorio</strong></p>
+                    </footer>
+                </article>
+                <article id="Programación">
+                    <header>
+                        <h3>Programación</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="prog"><strong>PROG</strong><br><abbr title="AMBROSIO CASADO FERNANDEZ"><i>AMB</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor. Ambrosio Casado Fernández</strong></p>
+                    </footer>
+                </article>
+                <article id="Entornos">
+                    <header>
+                        <h3>Entornos de desarrollo</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="edd"><strong>EDD</strong><br><abbr title="JAVIER COQUE GARCIA"><i>JCIF</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td class="edd"><strong>EDD</strong><br><abbr title="JAVIER COQUE GARCIA"><i>JCIF</i></abbr></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor. Javier Coque García</strong></p>
+                    </footer>
+                </article>
+                <article id="Sistemas">
+                    <header>
+                        <h3>Sistemas informáticos</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2" class="sinf"><strong>SINF</strong><br><abbr title="VALTER JORGE DE SOUSA RAPOSO"><i>VSIF</i></abbr></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor. VALTER JORGE DE SOUSA RAPOSO</strong></p>
+                    </footer>
+                </article>
+                <article id="FOL">
+                    <header>
+                        <h3>Formación y orientación laboral</h3>
+                    </header>
+                    <table class="tabla">
+                        <!--<colgroup span="1" style="background-color:silver">-->
+                        <thead>
+                            <tr class="dias">
+                                <th>Horas(2)</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miercoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="horas">1<br>De 08:30<br>Hasta 09:20</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">2<br>De 09:20<br>Hasta 10:10</td>
+                            </tr>
+                            <tr>
+                                <td class="horas">3<br>De 10:10<br>Hasta 11:00</td>
+                                <td rowspan="2" class="fol"><strong>Formación Orient La</strong><br><abbr title="MARIA ENRIQUETA GONZALEZ CARNERO"><i>MGFO</i></abbr></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="horas">4<br>de 11:25<br>Hasta 13:05</td>
+                                <td class="fol"><strong>Formación Orient La</strong><br><abbr title="MARIA ENRIQUETA GONZALEZ CARNERO"><i>MGFO</i></abbr></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">5<br>De 12:15<br>Hasta 13:05</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="horas">6<br>De 13:05<br>Hasta 13:55</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <footer class="footerArticulos">
+                        <p><strong>Profesor Maria Enriqueta González Carnero</strong></p>
+                    </footer>
+                </article>		
+            </section>
+        </main>
+        <footer>
+            <table>
+                <caption>CLAVES DEL PROFESORADO</caption>
+                <tbody>
+                    <tr>
+                        <th><i>AMB</i></th>
+                        <td>AMBROSIO CASADO FERNANDEZ</td>
+                        <th><i>ARIF</i></th>
+                        <td>AMOR RODRIGUEZ NAVARRO</td>
+                        <th><i>JCIF</i></th>
+                        <td>JAVIER COQUE GARCÍA</td>
+                    </tr>
+                    <tr>
+                        <th><i>MELI</i></th>
+                        <td>HERMELINDA RAMOS OSORIO</td>
+                        <th><i>MGFO</i></th>
+                        <td>Maria Enriqueta GONZALEZ CARNERO</td>
+                        <th><i>VSIF</i></th>
+                        <td>Valter Jorge DE SOUSA RAPOSO</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <caption>CLAVES DE LAS ASIGNATURAS</caption>
+                <tbody>
+                    <tr>
+                        <th class="lmsgi">Len Marcas Sist Ges I</th>
+                        <td class="lmsgi">Lenguaje de marcas y sistemas de gestión de la información</td>
+                        <th class="bdd">BDD</th>
+                        <td class="bdd">Bases de datos</td>
+                        <th class="prog">PROG</th>
+                        <td class="prog">Programación</td>
+                    </tr>
+                    <tr>
+                        <th class="edd">EDD</th>
+                        <td class="edd">Entornos de desarrollo</td>
+                        <th class="fol">FOL</th>
+                        <td class="fol">Formación y orientación laboral</td>
+                        <th class="sinf">SINF</th>
+                        <td class="sinf">Sistemas informáticos</td>
+                    </tr>
+                </tbody>
+            </table>
+            <address>"2021-22  IES LOS SAUCES. ©Todos los derechos reservados.<a href="mailto:ricardo.santom@educa.jcyl.es" target="_top">Ricardo Santiago Tomé"</a></address>
+        </footer>
+    </body>
+</html>

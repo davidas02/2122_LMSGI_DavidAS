@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+        Descripcion: Formulario mountain bike. Ejercicio 3 - unidad 2 LMSGI
+        Autor: David Aparicio Sir
+        Fecha creación: 31/10/2021
+        Última modificación: 31/10/2021
+        Estos ejercicios son prestados de Ricardo
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <!--reset comentado porque da problemas-->
+        <!--<link rel="stylesheet" href="css/reset.css" />-->
+        <title>HTML03</title>
+        <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+        <link href="css/fonts.css"  rel="stylesheet"  type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="author" content="Ricardo Santiago Tomé">
+        <meta name="application-name" content="Formularios HTML">
+        <meta name="description" content="Formularios HTML">
+        <meta name="keywords" content="form,etiquetas,label,fieldset,textarea,legend,input,checkbox,radio button,datalist,
+              ,html,css" >
+        <meta name="robots" content="index, follow">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script>
+            function fetch()
+            {
+                    var get = document.getElementById("get").value;
+                    document.getElementById("put").value = get;
+                }<!--Función javascript para recoger el valor de un slider con lista de valores en un input de tipo texto.-->
+                document.getElementById("demo").addEventListener("keyup", myFunction); <
+        </script>
+    <body>
+        <header>
+            <h1><i>Formulario de inscripción a marcha BTT revientateclas</i></h1>
+        </header>
+        <div id="password">
+            <p>Nombre de usuario: <input type="text" name="usuario" form="formularioBTT" tabindex="-1" autofocus=""/></p><!--Autofocus hace que al iniciar o reacargar la página, este sea el elemento central-->
+            <!--Con el atributo form valido usuario y contraseña aunque por razones de maquetación me interese tenerlos fuera de este-->
+            <p>Contraseña: <input type="password" name="pass" form="formularioBTT" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" 
+                                  title="Una contraseña válida es un conjuto de caracteres,
+                                  donde cada uno consiste de una letra mayúscula o minúscula, o un dígito.
+                                  La contraseña debe empezar con una letra y contener al menos un dígito"  tabindex="-2" id="demo1" required/></p>
+            <p><input type="submit" value="Enviar datos" form="formularioBTT"  tabindex="-3"></p><!--El "tabindex" de estos 3 input con valores negativos y correlativos hace 
+            que estos sean excluidos del flujo de tabulación del documento. Los utilizo aquí para que en caso de tabular el usuario por los restantes campos, no borre por erro
+            su usuario y contraseña ya introducidos. También he incluido el botón de enviar para que valide los datos y no sea elegible por tabulación por error-->
+        </div>
+        <form action="/action_page.php" target="blank" method="POST" name="BTT" id="formularioBTT" autocomplete="off">
+            <div id="datos">     
+                <h2 id="tituloDatos">Datos del biker</h2>
+                <fieldset>
+                    <legend>Nombre y apellidos</legend>
+                    <div class="datos">
+                        <div id="nombreee">
+                            <label for="nombre"> Nombre: </label>
+                            <!--Atributo spellcheck con valor true para correción ortográfica; inncesario si la codificación del lenguaje
+                            de la página está bien definida.-->
+                            <input type="text" name="nombre" id="nombre" spellcheck="true" placeholder="Escribe tu nombre" pattern="[a-zA-Z\s]{2,35´}" required  maxlength="35" size="35"/>
+                        </div>
+                        <div id="apellidosss">
+                            <label for ="apellido"> Apellidos: </label>
+                            <input type="text" name="apellido" id="apellido" spellcheck="true" placeholder="Escribe tu apellido" pattern="[a-zA-Z\s]{2,45´}" required  maxlength="35" size="35"/>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Genero</legend>
+                    <div class="datos">
+                        <p><input checked type="radio" name="genero" value="M" id="masculino"/><label for="masculino">Masculino</label></p>
+                        <p><input type="radio" name="genero" value="O" id="otro"/><label for="otro">Otro</label></p>
+                        <p><input type="radio" name="genero" value="F" id="femenino"/><label for="femenino">Femenino</label></p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ingrese su fecha de nacimiento.</legend>
+                    <fieldset id="fechaNac"  class="datos">
+                        <span>
+                            <label for="idWeek">Semana</label>
+                            <input id="idWeek" type="week" min="1900-W01" max="3000-W01" value="1950-W01"/>
+                        </span>
+                    </fieldset>
+                </fieldset>
+                <fieldset id="telefono">
+                    <div class="telefono" id="telefono1">
+                        <label for="idtel">Teléfonos de contacto (Fijo)</label>
+                        <input type="tel" name="telefono1" id="idtel" placeholder="(Código area) Número" list="listatelefonos" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}"
+                               title="Un número de teléfono válido consiste en tres dígitos entre paréntesis con el código de área
+                               ,un espacio, tres dígitos numéricos, un espacio o un -, y cuatro digitos numéricos">
+                        <datalist id="listatelefonos">
+                            <option value="(980) 000-0000" id="telefono01">
+                            <option value="(943) 000-0000" id="telefono02">
+                            <option value="(911) 000-0000" id="telefono03">
+                            <option value="(154) 000-0000" id="telefono04">
+                        </datalist>
+                    </div>
+                    <div class="telefono" id="telefono2">
+                        <label for="idtel2">Telefono contacto (Móvil)</label>
+                        <input type="tel" name="telefono2" id="idtel2" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}"
+                               title="Un número de teléfono válido consiste en tres dígitos entre paréntesis con el código de área
+                               ,un espacio, tres dígitos numéricos, un espacio o un -, y cuatro digitos numéricos"
+                               placeholder="(000) 000-0000" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label class="email" for="email">Introduzca su e-mail:</label>
+                    <span class="datos">
+                        <input type="email" id="email" name="email" size="38" required>
+                    </span>
+                </fieldset>
+            </div>
+            <div id="preferencias">
+                <h2 id="tituloPreferencias">Preferencias en carrera</h2>
+                <fieldset style="background-color:#FCF3CF;"><!--El elemento fielset admite que se le apliquen estilos con el atributo "style"-->
+                    <legend class="modalidad">Modalidad</legend>
+                    <div class="modalidad">
+                        <div id="modalidad1" class="preferencias">
+                            <fieldset><!--Para que solo se pueda escoger una modalidad a la vez, hay que darle a todos los input el mismo "name"-->
+                                <legend style="margin-right:auto;">Sentado(pero pedaleando)<br>
+                                    Selección única</legend>
+                                <p><input type="radio" name="2ruedas" id="idXCO" checked/><label for="idXCO">XCO</label></p>
+                                <p><input type="radio" name="2ruedas" id="idXCM"/><label for="idXCM">XCM</label></p>
+                                <p><input type="radio" name="2ruedas" id="idENDURO"/><label for="idENDURO">ENDURO</label></p>
+                            </fieldset>
+                        </div>
+                        <div id="modalidad2" class="preferencias">
+                            <fieldset><!--Los elementos fieldset pueden ser a su vez hijos de otros fieldset-->
+                                <legend style="margin-left:auto;">A pie(sufrimiento puro)<br>
+                                    Múltiple selección</legend>
+                                <p><input type="radio" name="apie1" id="idMARATON" /><label for="idMARATON">MARATON</label></p>
+                                <p><input type="radio" name="apie2" id="idMEDIAMARATON"/><label for="idMEDIAMARATON">MEDIA MARATON</label></p>
+                                <p><input type="radio" name="apie3" id="idANDARINES"/><label for="idANDARINES">ANDARINES</label></p>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset style="background-color:#FCF3CF;" id="fechaHora">
+                    <span class="fechaHora"><!--En el label inferior tenía un pattern establecido que si actuaba en la página, pero el w3c validator no admite el atributo pattern para la etiqueta label-->
+                        <label for="idFecha">Fecha de realización de la prueba </label><input type="date" name="idinicioFecha" value="2021-12-25" min="2021-12-25" max="2021-12-31" id="idFecha" step="1" required/>
+                    </span>
+                    <span class="fechaHora">
+                        <label for="idHora">Hora a resevar para revisión mecánica(07:00-09:00)</label><input type="time" name="idHora" id="idHora" value="07:00" min="07:00" max="09:00" step="5" required/>
+                    </span>
+                </fieldset>
+                <fieldset style="background-color:#FCF3CF;">
+
+                    <legend>Regalín</legend>
+                    <div>
+                        <fieldset>
+                            <label for="get">Talla de maillot conmemorativo</label>
+                            <input type="range" value="36" min="36" max="46" id="get" step="2" onchange="fetch()"/>
+                            <input type="text" id="put" size="10" style="text-align:center;color: red"/><!--dejo el estilo declarado dentro de la etiqueta para recordar
+                            como podemos personalizar con css los elementos input, a mi me sirve para elementos aislados que solo van a recibir un estilo-->
+                            <output id="output" name="output" for="get">Talla europea</output>
+                            <!--La etiqueta output recoge el valor seleccionado por el usuario en la barra de desplazamiento-->
+                            <datalist id="tallas">
+                                <option value="36" label="36">
+                                <option value="38" label="38">
+                                <option value="40" label="40">
+                                <option value="42" label="42">
+                                <option value="44" label="44">
+                                <option value="46" label="46">
+                            </datalist>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <p>
+                                <label for="listaValores">Subdorsal</label>
+                                <input id="listaValores" list="Valores" name="valores"  type="range" min="1" max="3" step="1"/>
+                                <output id="salida" name="salida" for="listaValores" >(1-3) Para concursantes en dúo o trío </output>
+                                <!--Sin javascript, así es como "no" funciona el type range-->
+                                <datalist id="Valores">
+                                    <option value="1" label="1">
+                                    <option value="2" label="2">
+                                    <option value="3" label="3">
+                                </datalist>
+                            </p>
+                        </fieldset>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="varios">
+                <h2 id="tituloCajon">Cajón desastre</h2>
+                <fieldset>
+                    <legend>Unión Ciclista Internacional</legend>
+                    <fieldset id="UCI" class="UCI">
+                        <legend>Selecciona Categoría UCI</legend>
+                        <select size="3" multiple name="UCI"><!--Con atributo size controlo el tamaño de la caja haciéndolo coincidir con las líneas que quiero mostrar-->
+                            <!--Con atributo multiple puedo elegir varios valores de la lista. Hay que dejar pulsado Ctrl y clickar sobre cada elemento que nos interese.-->
+                            <option value="UCI World-Cup">UCI World-Cup</option>
+                            <option value="UCI World-Tour">UCI World-Tour</option>
+                            <option value="UCI World-Series">UCI World-Series</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="UCI">
+                        <legend>Mes de última prueba antidoping</legend>
+                        <span>
+                            <label for="month">Mes:</label>
+                            <select id="month" name="month">
+                                <option selected>Enero</option>
+                                <option>Febrero</option>
+                                <option>Marzo</option>
+                                <option>Abril</option>
+                                <option>Mayo</option>
+                                <option>Junio</option>
+                                <option>Julyio/option>
+                                <option>Agosto</option>
+                                <option>Septiembre</option>
+                                <option>Octubre</option>
+                                <option>Noviembre</option>
+                                <option>Diciembre</option>
+                            </select>
+                        </span>
+                    </fieldset>
+                    <fieldset class="UCI">
+                        <legend>Mes y año de primera ficha UCI</legend>
+                        <span>
+                            <label for="idMes">Fecha </label>
+                            <input id="idMes" name="Mes" type="Month"/>
+                        </span>
+                    </fieldset>
+                </fieldset>
+                <fieldset id="opinion">
+                    <legend>Opinión</legend>
+                    <textarea name="Area de texto" rows="10" cols="102" placeholder="Nos gustaría saber tu opinión sobre el proceso de inscripción en la marcha..."></textarea>
+                </fieldset>
+                <fieldset class="bici">
+                    <fieldset id="color">
+                        <legend>SORTEO BTT</legend>
+                        <label for="favcolor">Selecciona color favorito (por si hay suerte):</label>
+                        <input type="color" id="favcolor" name="favcolor" value="#3498DB">
+                        <output id="colorFavorito" for="favcolor" name="colorFavorito">Tú color será enviado al fabricante</output>
+                    </fieldset>
+                    <fieldset id="BTT">
+                        <label for="idBici">Imagen bici sorteo</label>
+                        <p>O envíanos tu diseño personalizado<input type="file" name="foto"></p>
+                        <!--atributo formenctype con valor multipart/form-data. Abre el selector de archivos y permite subir el archivo seleccionado junto con el formulario-->
+                        <input type="image" name="imagenBici" id="idBici" formenctype="multipart/form-data" src="images/imagenBici.jpg" alt="Imagen de BTT sorteada" height="100"/>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <label for="idBrowsers">Selecciona tu navegador favorito</label>
+                    <input name="browser" type="url" id="idBrowsers" list="listaurls" >
+                    <datalist id="listaurls">
+                        <option value="http://www.duckduckgo.com">
+                        <option value="http://www.google.com">
+                        <option value="http://www.yahoo.com">
+                        <option value="http://www.bing.com">
+                    </datalist>
+                </fieldset>
+                <fieldset>
+                    <p>
+                        Busca entre nuestras marcas: <input type="search" name="busquedamarcas" list="listamarcas">
+                        <input type="submit" value="Buscar">
+                    </p>
+                    <datalist id="listamarcas">
+                        <option value="Orbea" id="primeraMarca">
+                        <option value="BH">
+                        <option value="Canyon">
+                        <option value="Scott">
+                    </datalist>
+                </fieldset>
+                <fieldset class="final">
+                    <fieldset id="medios">      
+                        <legend>¿Por qué medio supiste de "revientateclas"?</legend><!--A continuación, aunque los checkbox tengan el mismo name, envían múltiples valores-->
+                        <p><input type="checkbox" name="pregunta" value="Web" id="pregunta1" checked><label for="pregunta1">WEB</label></p> 
+                        <p><input type="checkbox" name="pregunta" value="Rss" id="pregunta2"><label for="pregunta2">RSS</label></p>      
+                        <p><input type="checkbox" name="pregunta" value="MassMedia" id="pregunta3"><label for="pregunta3">Mass Media</label></p>    
+                    </fieldset>
+                    <fieldset id="foto">
+                        <legend>Patata!!!</legend>
+                        <label for="tuCara">Elige una foto tuya para adjuntar.</label>
+                        <input type="file" id="tuCara" name="tuCara" accept=".jpg, .jpeg, .png" ><!--Con el atributo accept controlo que extensines es válido adjuntar.-->
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <p>
+                       Dificultad en rellenar el formulario(1-5): 
+                       <input type="number" name="dificultad" list="listaDificultad" min="1" max="5" step="1"/>
+                    </p>
+                    <datalist id="listaDificultad">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                    </datalist>
+                </fieldset>
+            </div>
+            <fieldset id="botones">
+                <div  id="botonEnviar">
+                    <input type="submit" value="Enviar" id="botonAzul"/>
+                    <input type="reset" value="Resetear formulario" id="botonReset"/>
+                </div>
+            </fieldset>
+            <p><input type="hidden" id="formularioId" name="formularioId" value="formulario revienta-teclas 2021"/>
+                Este párrafo es un mensaje visible que sirve para indicar que hay un elemento hidden no visible en el formulario
+                y que mandará su value para identificar de que id de formulario se trata.<br>
+                Al analizar la url mandada si ponemos el form en method=get, se ve el value reflejado.</p>
+            <!--Amor, espero que estés leyendo esto después de ver el párrafo de aviso que he dejado visible.
+            Comprobado, funciona, al final de la url refleja el value del método hidden. Aunque leo en foros que no es seguro 
+            este input hidden si no se le aplica javascript ya que se puede editar y ver el valor oculto con símplemente hacer un inspecionar.-->
+        </form>
+        <footer>
+            <address>"2021-22  IES LOS SAUCES. ©Todos los derechos reservados.David Aparicio Sir</address>
+            <a href="https://www.freepik.es/vectores/fondo">Vector de Fondo creado por starline - www.freepik.es</a>
+        </footer>
+    </body>
+</html>

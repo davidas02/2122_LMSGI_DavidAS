@@ -1,0 +1,161 @@
+/*aquí habría puesto las reglas habituales para aplicar a todos los elementos o
+al body en las que pondrían margenes y paddings a 0 y quitaría estilo a las
+listas, pero ya no lo voy a hacer más porque he implementado el archivo reset.css
+para que haga este trabajo en cada una de las prácticas.*/
+figure{
+    width: 100%;
+    font-size: 1.5em;
+    padding: 2em 0 ;
+}
+/*Aquí selecciono los elementos que tengan el atributo 'class' y que 
+contenga el string 'logo''*/
+[class*=logo]{
+    width: 100px;
+    padding: 8px 4px;
+    margin: 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.25em;
+}
+.logo-1{
+    text-decoration: underline;
+    font-family: 'Didot', cursive;
+    color: #b76e79;
+}
+.logo-1 span{
+    font-size: 0.75em;
+    color:#D4AC0D;
+    text-decoration: underline;
+}
+.logo-2{
+    font-family: 'Edwardian Script ITC',sans-serif;
+    font-weight: bold;
+    color: #b76e79;
+    text-shadow: -6px 2px 16px  #A93226;
+    /*text-decoration: underline #D4AC0D;*/
+}
+.logo-2 span{
+    font-family: 'Edwardian Script ITC',sans-serif;
+    color: #D4AC0D;
+}
+.logo-3{
+    font-family: 'Fox',cursive;
+    color: #C0C0C0;
+    text-shadow:4px 8px 2px #990099;
+}
+.logo-3 span{
+    color: #990099;
+    font-family: 'Didot',serif;
+    text-shadow:4px 8px 2px #990099;
+}
+.logo-4{
+    font-family: 'Algerian',normal;
+    color: #990066;
+    text-shadow:2px 2px 2px #CE5937;
+    text-shadow: 6px -3px 5px #cc0066;
+    text-transform: uppercase;
+}
+.logo-4 span{
+    color: #cc0066;
+    text-shadow: 6px -3px 5px #990066;;
+}
+/*Otra manera de seleccionar el '.content'. Con esta le digo que quiero
+todas las etiquetas que tengan el atributo 'class' igual a 'content'*/
+[class=content]{
+    margin:0 auto;
+    padding: 25px 50px 10px 50px;
+    width: 50%;
+    max-width: 600px;
+    border:1px;
+    border-top: dashed;
+    border-bottom: dashed;
+    border-left: dotted;
+    border-right: dotted;
+    border-color: red red green orange;
+}
+.content div{
+    width: 30%;
+    max-width: 300px;
+    padding: 25px 10px 25px 10px;
+    border: 2px solid red;
+    background-color: lightsteelblue;
+    box-sizing: border-box;
+}
+.content div:nth-child(odd){
+    margin: 0 auto; 
+    width: 30%;
+    max-width: 300px;
+}
+/*Al pasar por encima de los div, muestra una sombra aplicada al texto.*/
+.content div:nth-child(odd):hover{
+     text-shadow:1px 1px 1px black;
+}
+.content div:nth-child(even):hover{
+     text-shadow:1px 1px 1px black;
+}
+.content div:nth-child(even){
+    text-align: center; 
+    width: 30%;
+    max-width: 300px;
+    margin: 2em 0 2em 2em;
+}
+/*Transformacion del div 2 a  nayúsculas la primera letra de cada línea*/
+.content div:nth-child(2):hover{
+    text-transform: capitalize;
+}
+/*Transformacion del div 3 a mayúsculas*/
+.content div:nth-child(3):hover{
+    text-transform: uppercase;
+}
+.content div:hover{
+    background-color: aqua;
+}
+.content div:nth-child(1){
+    font-family: 'Verdana',sans-serif;
+}
+.content div:nth-child(2){
+    font-family: 'Didot',serif;
+}
+.content div:nth-child(3){
+    font-family: 'Freemono',monospace;
+}
+.content div:nth-child(4){
+    font-family: 'Roboto', sans-serif;
+}
+/*last-of-type. Útil para seleccionar desde el final hacia el principio
+de una serie de elementos hermanos del mismo tipo. El selector numérico
+tiene que contarse desde el final hacia el principio.*/
+.content div:nth-last-of-type(2){
+    font-family: 'Akronim',cursive;
+    font-size: 24px;
+}
+/*Aquí pruebo con last-child. Como en el anterios, el parámetro 
+numérico entre paréntesis hay que tener en cuenta que
+se empieza a contar desde el final hacia el principio.*/
+.content div:nth-last-child(1){
+    font-family: 'Montserrat', sans-serif;
+}
+footer{
+    text-align: center;
+    margin: 1em;
+}
+/*Estilos para que le aplique a mi direccion de correo
+para enfatizar su presencia.*/
+address a:link{
+    width: 70%;
+    text-align: center;
+    background-color: #FAD7A0;
+}
+footer address{
+    text-decoration: underline;
+    font-family: 'Didot', cursive;
+    color: #b76e79;
+}
+address a{
+    font-family: 'Algerian',normal;
+    font-size: 1.25em;
+    margin: 0 1em;
+    color: #990066;
+    text-shadow:2px 2px 2px #CE5937;
+    text-transform: uppercase;
+}

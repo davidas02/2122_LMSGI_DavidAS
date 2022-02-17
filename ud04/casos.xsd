@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="casos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[A-ZÑ]{1}[A-ZÑa-zñ ]*"/>
+                            <xs:maxLength value="25"/>
+                            <xs:minLength value="3"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="edad">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="18"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="marca">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Opel|Renault|Audi|SEAT|Kia"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="repetidor">
+                    <xs:complexType>
+                        <xs:attribute name="opcion">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="yes|no"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="asignatura">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="nota">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+                                            <xs:minInclusive value="1"/>
+                                            <xs:maxInclusive value="10"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="tipo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="uno"/>
+                        <xs:enumeration value="dos"/>
+                        <xs:enumeration value="tres"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema> 

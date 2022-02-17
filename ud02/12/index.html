@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>HTML 12 Ricardo Santiago Tomé</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/estilo.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="author" content="Ricardo Santiago Tomé">
+        <meta name="application-name" content="NEFLIX">
+        <meta name="description" content="Multimedia en streaming">
+        <meta name="keywords" content="analítica web, seo, web semántica, seo semántico, analytics, netflix, streaming, series
+              películas, documentales,contenido a la carta, contenido bajo demanda, suscripción" >
+        <!-- Recomendado 5 o 8 palabras clave, Cada palabra clave puede estar constituida por hasta 4 o 5 palabras. -->
+        <meta name="robots" content="index,nofollow">
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <!--Todas las reglas de estilo para el index.html están en el archivo estilo.css; 
+    las que comparten clase entre este index.html y form-inicio.html las individualizo
+    en el head con los style dentro del segundo archivo en ser creado(form-inicio.html)-->
+    <body>
+        <nav>
+            <a href="index.html" class="logo">NEFLIX</a>
+            <a href="form-inicio.html" class="inicio">Inicio</a>
+        </nav>
+        <main>
+            <div class="container">
+                <p id="texto1">Todas las películas y series<br> que desees, y mucho más.<br>
+                    Disfruta donde quieras. Cancela cuando quieras.</p>
+            </div>
+            
+        <form method="GET" target="blank" action="/altaNeflix.php" name="netflix">
+            <fieldset>
+                <!--utilizo span cuando el elemento del formulario lleva asociado una label
+                , utilizo div cuando no. Me resultó más rápido maquetarlo así.-->
+                <label class="email" for="email"></label>
+                <span>
+                    <input type="email" id="email" name="email" size="40" 
+                           autocomplete="off" placeholder="Correo electrónico" required>
+                </span>
+                <div class="submit">
+                    <input type="submit" value="Empezar" id="empezar">
+                </div>
+            </fieldset>
+        </form>
+        </main>
+    </body>
+</html>

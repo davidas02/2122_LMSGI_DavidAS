@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://elpais.com/</id>
+    <title>
+        Atom De LO PAIS
+    </title>
+    <updated>2022-01-17T08:59:00+1:00</updated>
+    <link href="https://servicios.elpais.com/rss/" title="Lo Pais"/>
+   <author>
+        <name>
+            David Aparicio Sir
+        </name>
+        <email>
+            david.apasir@educa.jcyl.es
+        </email>
+   </author>
+   <entry>
+       <id>https://elpais.com/internacional/2022-01-13/almaty-zona-cero-de-las-protestas-de-kazajistan.html</id>
+       <title>
+           Almaty, zona cero de las protestas de Kazajistán
+       </title>
+       <updated>2022-01-13T08:11:00+1:00</updated>
+       <author>
+           <name>
+               Guillermo Abril
+           </name>
+       </author>
+   </entry>
+</feed>

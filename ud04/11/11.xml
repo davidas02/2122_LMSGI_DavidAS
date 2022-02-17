@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE receta[
+<!ELEMENT receta (nombre,descripcion,tiempo,ingredientes,instrucciones)>
+<!ATTLIST receta plato (primero|segundo|postre) #REQUIRED
+                 xmlns:xsi CDATA #IMPLIED
+                 xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT tiempo EMPTY>
+<!ATTLIST tiempo preparacion CDATA #REQUIRED
+                 coccion CDATA #IMPLIED>
+<!ELEMENT ingredientes (ingrediente+)>
+<!ELEMENT ingrediente (nombre_ing,cantidad?)>
+<!ELEMENT nombre_ing (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST cantidad unidad (gramos|pizca|mililitros|chorro|cucharada) #IMPLIED>
+<!ELEMENT instrucciones (paso+)>
+<!ELEMENT paso (#PCDATA)>
+]>
+
+<receta plato="primero"
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='11.xsd'>
+    <nombre>
+        Risotto milanesa
+    </nombre>
+    <descripcion>
+        Plato de arroz tipico italiano
+    </descripcion>
+    <tiempo preparacion="40" coccion="20"/>
+    <ingredientes>
+        <ingrediente>
+            <nombre_ing>arroz</nombre_ing>
+            <cantidad unidad="gramos">500</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>cebolla mediana</nombre_ing>
+            <cantidad>1</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>azafran</nombre_ing>
+            <cantidad unidad="pizca">1</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>Queso Parmesano</nombre_ing>
+            <cantidad unidad="gramos">100</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>Mantequilla</nombre_ing>
+            <cantidad unidad="gramos">100</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>Sal</nombre_ing>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>Pimienta</nombre_ing>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>Caldo</nombre_ing>
+            <cantidad unidad="mililitros">1000</cantidad>
+        </ingrediente>
+        <ingrediente>
+            <nombre_ing>vino blanco</nombre_ing>
+            <cantidad unidad="chorro">1</cantidad>
+        </ingrediente>
+    </ingredientes>
+    <instrucciones>
+        <paso>
+            Paso 1.- Picamos la cebolla y la pochamos con la mitad
+            de la mantequilla.
+        </paso>
+        <paso>
+            Paso 2.- Cuando esté transparente, echamos el azafrán,
+            el vino y dejamos que reduzca.
+        </paso>
+        <paso>
+            Paso 3.- A continuación, incorporamos el arroz, lo
+            sofreímos un poco.
+        </paso>
+        <paso>
+            Paso 4.- Vamos añadiendo el caldo caliente poco a poco
+            mientras removemos.
+        </paso>
+        <paso>
+            Paso 5.- Salpimentamos.
+        </paso>
+        <paso>
+            Paso 6.- Cuando esté casi hecho, agregamos el resto de
+            la mantequilla y el queso.
+        </paso>
+        <paso>
+            Paso 7.- Servimos enseguida.
+        </paso>
+    </instrucciones>
+</receta>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--
+        Descripcion: Primer ejercicio
+        Autor: David Aparicio Sir
+        Fecha creación/modificación: 7/10/2021
+        Estos ejercicios son prestados de Ricardo
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML01</title>
+        <!--reset css comentado porque da problemas-->
+        <!--<link rel="stylesheet" href="css/reset.css" />-->
+        <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+        <link href="css/fonts.css"  rel="stylesheet"  type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="author" content="Ricardo Santiago Tomé">
+        <meta name="application-name" content="Formularios HTML">
+        <meta name="description" content="Formularios HTML">
+        <meta name="keywords" content="form,etiquetas,label,fieldset,textarea,legend,input,checkbox,radio button,datalist,
+              ,html,css" >
+        <meta name="robots" content="index, follow">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header>
+            <h1>NOTICIAS</h1>
+        </header>
+        <aside>
+            <nav>
+                <ul id="navegacion">
+                    <li>
+                        <a href="#local">LOCAL</a>
+                    </li>
+                    <li>
+                        <a href="#nacional">NACIONAL</a>
+                    </li>
+                    <li>
+                        <a href="#internacional">INTERNACIONAL</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section>
+                <header>
+                    <h2 id="local">LOCAL</h2>
+                </header>
+                <article>
+                    <header>
+                        <a href="https://www.laopiniondezamora.es/benavente/2021/10/08/benavente-acoge-viernes-espectaculo-cuaderno-58148723.html" target="blank">
+                            <h3 class="noticia1">
+                                <span id="Benavente">Benavente</span> acoge este viernes el espectáculo <span id="espectaculo">“El cuaderno de últimas voces”</span>
+                            </h3>
+                        </a>
+                        <h4 class="noticia1">El evento comenzará a las 19:00 horas y tendrá lugar en la Casa de Cultura “La Encomienda”</h4>
+                    </header>
+                    <div>
+                        <!--Este div es el cuerpo de la noticia y una imagen.-->
+                        <blockquote cite="https://www.laopiniondezamora.es/benavente/2021/10/08/benavente-acoge-viernes-espectaculo-cuaderno-58148723.html">
+                            <pre id="texto1">
+								El
+								<bdo dir="rtl">
+									<abbr title="Ayuntamiento de Benavente">AYTO</abbr> de Benavente
+								</bdo>
+								informa:
+								desde su Concejalía de Cultura, que en el día de hoy,
+								<s>viernes 9</s>viernes 8 de octubre, a partir de las 19:00 horas, 
+								tendrá lugar en el salón de actos de la 
+								Casa de la Cultura “La Encomienda” el espectáculo 
+								“El cuaderno de últimas voces” a cargo del zamorano 
+								José Luis Gutiérrez “<abbr title="José Luis Gutiérrez">Guti</abbr>”, 
+								el cual se encargará de la narración acompañado por <del>Una compañera anónima</del>
+								<ins>Leticia Ruifernández</ins>
+								,quien a través de sus acuarelas acompañará el relato principal.
+                            </pre>
+                        </blockquote>
+                        <figure id="imagen1">
+                            <a href="https://www.laopiniondezamora.es/benavente/2021/10/08/benavente-acoge-viernes-espectaculo-cuaderno-58148723.html">
+                                <img src="images/cuadernoUltimasVoces.jpg" alt="Los dos protagonistas del espectáculo" id="noticia2">
+                            </a>
+                            <figcaption>"Los dos protagonistas del espectáculo". Original por
+                                <a href="https://estaticos-cdn.prensaiberica.es/clip/f561489d-20a0-48a6-b35e-e24de443311b_16-9-discover-aspect-ratio_default_0.jpg">CEDIDA</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer class="noticia1">
+                        <address>Ignacio Fortuoso</address>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <a href="https://www.laopiniondezamora.es/benavente/2021/10/07/latemaluminium-usal-estrechan-lazos-fortalecer-58108362.html" target="blank">
+                            <h3>LatemAluminium y la <abbr title="Universidad de Salamanca">USAL</abbr> estrechan lazos para fortalecer y agilizar proyectos de innovación e investigación</h3>
+                        </a>
+                        <h4>El presidente ejecutivo de la compañía, <samp>Macario Fernández</samp>, y el rector de la institución académica, Ricardo Rivero, 
+                            cierran un convenio de colaboración</h4>
+                    </header>
+                    <div>
+                        <dl>
+                            <dt>LatemAluminium</dt>
+                            <dd>LatemAluminium es una empresa que va a levantar Benavente(más nos vale)...</dd>
+                            <dt><span class="Benavente">Benavente</span></dt>
+                            <dd><span class="Benavente">Benavente</span> es un municipio de la provincia de Zamora.</dd>
+                            <dd>Es la segunda población en importancia y población.</dd>
+                            <dd>Es la cabecera de la comarca de <span class="Benavente">"Benavente y los valles"</span></dd>
+                        </dl>
+                        <blockquote cite="https://www.laopiniondezamora.es/benavente/2021/10/07/latemaluminium-usal-estrechan-lazos-fortalecer-58108362.html">
+                            <p><dfn title="presidente ejecutivo de LatemAluminium">Macario Fernández</dfn>, presidente ejecutivo de LatemAluminium</p> y 
+                            <p><dfn title="rector de la Universidad de Salamanca, USAL">Ricardo Rivero</dfn>, rector de la Universidad de Salamanca(USAL)
+                            </p>
+                            han mantenido este jueves un encuentro en el Campus Viriato de Zamora para estrechar lazos que permitan, próximamente, 
+                            desarrollar, fortalecer y agilizar proyectos de innovación en torno al aluminio en el que los estudiantes de la institución académica salmantina, 
+                            junto a los responsables de la empresa, puedan cooperar en el futuro en el marco de distintas líneas de investigación de las que ya dispone la compañía en la actualidad.<hr/>
+                            Para acceso a más información:<kbd>Alt+U</kbd>
+                        </blockquote>
+                        <figure>
+                            <a href="https://www.laopiniondezamora.es/benavente/2021/10/07/latemaluminium-usal-estrechan-lazos-fortalecer-58108362.html">
+                                <img src="images/LatemAluminiumBenavente.jpg" alt="Reunión de la empresa con el representantes de la USAL">
+                            </a>
+                            <figcaption>
+                                "Reunión de la empresa con representantes de la USAL". Original por
+                                <a href="https://estaticos-cdn.prensaiberica.es/clip/bd5bd4c3-af16-42c1-ac9d-1ad0c32ff1f8_16-9-discover-aspect-ratio_default_0.jpg">CEDIDA</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <address>Ignacio Fortuoso</address>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <a href="https://www.laopiniondezamora.es/benavente/2021/10/13/benavente-pilar-frente-pandemia-58294457.html" target="blank">
+                            <h3>
+                                <strong><mark>Benavente</mark>: Un <em>“pilar”</em> frente a la pandemia</strong>
+                            </h3>
+                        </a>
+                        <h4>La Guardia Civil recupera con restricciones su fiesta, con misa e izado de bandera, a las puertas del acuartelamiento de las Eras</h4>
+                    </header>
+                    <div>
+                        <blockquote cite="https://www.laopiniondezamora.es/benavente/2021/10/13/benavente-pilar-frente-pandemia-58294457.html">
+                            <p>
+                                La celebración del <i>Día del Pilar</i> este año en Benavente ha sido fundamentalmente un día de homenaje a la Guardia Civil, por su trabajo 
+                                durante todo el año, sobre todo, en tiempo de pandemia. Tras dos años sin celebrar a su patrona, el acuartelamiento de la calle de 
+                                Las Eras de Benavente ha sacado a la calle su conmemoración focalizada en dos actos centrales, una misa oficiada en la iglesia de 
+                                San Juan del Mercado y el izado de la bandera de España a las puertas del cuartel, mientras sonaba el <sup>himno de España.</sup>
+                                <sub>También entonaron el himno de la Guardia Civil</sub>
+                            </p>
+                        </blockquote>
+                        <p>
+                            Esta variable <var>guardia</var> representa una cadena de texto con el valor "Viva la Guardia Civil".
+                        </p>
+                        <p>
+                            <code>public class primerIndex{
+                                public static void main(String[]args){
+                                String guardia="Viva la Guardia Civil";
+                                System.out.println("Este es el primer index de la asignatura LMSGI y además"+guardia);
+                                }
+                                }</code>
+                        </p>
+                        <figure>
+                            <a href="https://www.laopiniondezamora.es/benavente/2021/10/13/benavente-pilar-frente-pandemia-58294457.html">
+                                <img src="images/GuardiaCivil.jpg" alt="Guardias civiles tras el acto de celebración del Día del pilar, en Benavente">
+                            </a>
+                            <figcaption>Guardias civiles<sup>(muchos)</sup> tras el acto de celebración del Día del Pilar, en Benavente 
+                                <a href="https://estaticos-cdn.prensaiberica.es/clip/b56c14bf-4978-4775-a0a3-99c39685e134_16-9-discover-aspect-ratio_default_0.jpg">
+                                    <small>E.P</small>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h2 id="nacional">NACIONAL</h2>
+                </header>
+                <article>
+                    <header>
+                        <a href="https://www.elmundo.es/espana/2021/10/07/615eadb8fc6c83a64d8b45c5.html" target="blank">
+                            <h3>Huelga de Renfe, <time datetime="2021-10-07">hoy 7 de octubre</time></h3>
+                        </a>
+                        <h4>Los maquinistas de Renfe continúan la huelga.</h4>
+                    </header>
+                    <div>
+                        <blockquote cite="https://www.elmundo.es/espana/2021/10/07/615eadb8fc6c83a64d8b45c5.html">
+                            <p>
+                                Renfe afronta hoy, jueves 7 de octubre, la quinta jornada de huelga de sus 
+                                maquinistas, en vísperas del puente del Pilar. <q>Las cuatro jornadas precedentes
+                                    se vivieron situaciones de caos, retrasos y aglomeraciones por el incumplimiento 
+                                    de los servicios mínimos por parte de parte de los maquinistas que tenían que 
+                                    ejecutarlos</q>, según denuncia Renfe.
+                            </p>
+                        </blockquote>
+                        <figure>
+                            <a href="https://www.elmundo.es/espana/2021/10/07/615eadb8fc6c83a64d8b45c5.html">
+                                <img src="images/HuelgaRenfe.jpg" alt="Maquinistas manifestándose en una estación.">
+                            </a>
+                            <figcaption>
+                                Maquinistas manifestándose en una estación. Original por
+                                <a href="https://www.elmundo.es/espana/2021/10/07/615eadb8fc6c83a64d8b45c5.html">
+                                    <code>Marta Pérez EFE</code>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <address>Marta Pérez</address>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <a href="https://www.elmundo.es/espana/2021/10/07/615f519ffdddff29048b45aa.html" target="blank">
+                            <h3>Educación Artística tendrá casi el mismo peso que Inglés en Primaria</h3>
+                        </a>
+                        <h4>Esta asignatura tendrá al menos 360 horas obligatorias frente a las 365 de Lengua Extranjera</h4>
+                    </header>
+                    <div>
+                        <blockquote cite="https://www.elmundo.es/espana/2021/10/07/615f519ffdddff29048b45aa.html">
+                            <p>
+                                La Educación Artística tendrá casi el mismo peso que el Inglés en la nueva 
+                                Primaria. La ministra de Educación, Pilar Alegría, promoverá la Música y la 
+                                Plástica entre los alumnos de seis a 12 años al tiempo que reduce en un tercio
+                                las horas obligatorias.
+                            </p>
+                        </blockquote>
+                        <figure>
+                            <a href="https://www.elmundo.es/espana/2021/10/07/615f519ffdddff29048b45aa.html">
+                                <img src="images/PilarAlegria.jpg" alt="La ministra de educación,Pilar Alegría">
+                            </a>
+                            <figcaption>
+                                La ministra de educación PIlar Alegría. Original por
+                                <a href="https://www.bing.com/images/blob?bcid=RAqTMSOdkVgDxQ">Antonio Heredia</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <address>Antonio Heredia</address>
+                    </footer>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h2 id="internacional">INTERNACIONAL</h2>
+                </header>
+                <article>
+                    <header>
+                        <a href="https://www.elmundo.es/internacional/2021/10/04/615a91b1fdddffee7f8b45e5.html" target="blank">
+                            <h3>Fumio Kishida es investido primer ministro de Japón</h3>
+                        </a>
+                        <h4>El nuevo jefe de Gobierno tiene previsto anunciar la composición de su Gobierno en las próximas horas</h4>
+                    </header>
+                    <div>
+                        <blockquote cite="https://www.elmundo.es/internacional/2021/10/04/615a91b1fdddffee7f8b45e5.html">
+                            Fumio Kishida ha sido investido como nuevo primer ministro de Japón en una sesión parlamentaria extraordinaria
+                            tras su victoria en las primarias del gobernante Partido Liberal Democrático (PLD).
+                            El nombramiento de Kishida fue ratificado formalmente en una votación en 
+                            ambas cámaras, en las que la coalición gobernante cuenta con amplia 
+                            mayoría, y sucede a Yoshihide Suga, quien renunció en horas previas en 
+                            bloque junto a su Gabinete tras poco más de un año al frente del Ejecutivo.
+                        </blockquote>
+                        <figure>
+                            <a href="https://www.elmundo.es/internacional/2021/10/04/615a91b1fdddffee7f8b45e5.html">
+                                <img src="images/FumioKishida.jpg"/>
+                            </a>
+                            <figcaption>Fumio Kishida, investido primer mnistro de japón. Original por
+                                <a href="https://phantom-elmundo.unidadeditorial.es/a782758a2c150770ea518aedab0a0954/resize/600/f/webp/assets/multimedia/imagenes/2021/10/04/16333253861949.jpg">AFP</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <address>EFE Tokyo</address>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <a href="https://www.elmundo.es/internacional/2021/10/13/616615f121efa02c578b4609.html" target="blank">
+                            <h3>América arremete contra Colón en el Día de la Hispanidad para reivindicar los derechos de los indígenas</h3>
+                        </a>
+                        <h4>En contraste, el gobernador de Florida, Ron DeSantis, defendió la conmemoración del viaje de Cristóbal Colón
+                            que llevó al descubrimiento de América como una celebración de una "pieza fundamental de la creación del mundo occidental"
+                        </h4>
+                        <hr/>
+                    </header>
+                    <div>
+                        <blockquote cite="https://www.elmundo.es/internacional/2021/10/13/616615f121efa02c578b4609.html">
+                            Muchos americanos, especialmente en América Latina, salieron a las calles este martes, en el Día de la Hispanidad,
+                            para exigir la reivindicación de los derechos de los indígenas y mostrar su descontento con la "vulneración" que 
+                            sufrieron durante el descubrimiento en 1492, por lo que se fueron lanza en ristre contra las estatuas de Cristóbal Colón.
+                        </blockquote>
+                        <blockquote>"El viaje de descubrimiento de Cristobal Colón es una pieza fundamental de la creación del mundo occidental"</blockquote><cite>Ron de Santis</cite>
+                        <figure>
+                            <a href="https://www.elmundo.es/internacional/2021/10/13/616615f121efa02c578b4609.html">
+                                <img src="images/CristobalColon.jpg" alt="Estatua de Colón en Ciudad de Guatemala con una soga al cuello">
+                            </a>
+                            <figcaption>Estatua de Colón en Ciudad de Guatemala con una soga al cuello. Original por
+                                <a href="https://phantom-elmundo.unidadeditorial.es/4ac33a319ad8ea991c1a0bf265031a00/resize/600/f/webp/assets/multimedia/imagenes/2021/10/13/16340805491467.jpg">Esteban Bilbao EFE</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <address>Esteban Bilbao EFE</address><hr/>
+                    </footer>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <address>"Todos los derechos reservados - <a href="mailto:ricardo.santom@educa.jcyl.es" target="_top">Ricardo Santiago Tomé ©"</a>	</address>
+        </footer>
+    </body>
+</html>

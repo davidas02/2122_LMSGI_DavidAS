@@ -1,0 +1,13 @@
+codigo{
+    white-space: pre;
+}
+lenguaje::after{
+    content:'\A';
+    white-space: pre;
+}
+nombre{
+    color:red;
+    border: 2px red solid; 
+    font-size: 20px;
+}
+

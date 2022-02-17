@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilos.css"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE ejemplo[
+<!ELEMENT ejemplo (lenguaje+)>
+<!ELEMENT lenguaje (nombre,codigo+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT codigo (#PCDATA)>
+]>
+<ejemplo>
+    <lenguaje> 
+        <nombre>
+            Java
+        </nombre>
+        <codigo>
+            class HelloWorld{
+                // Tu programa comienza con una llamada a main().
+                // Imprime "Hola Mundo" a la ventana de la terminal.
+                public static void main(String args[]){
+                    System.out.println("Hola Mundo");
+                }
+            }
+        </codigo>
+    </lenguaje>
+    <lenguaje>
+        <nombre>
+            HTML
+        </nombre>
+        <codigo>
+        <![CDATA[
+            <!DOCTYPE html>
+            <html lang="es">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Hola Mundo</title>
+                </head>
+                <body>
+                    <h1>HOLA MUNDO</h1>
+                </body>
+            </html>
+        ]]>
+        </codigo>
+    </lenguaje>
+</ejemplo>

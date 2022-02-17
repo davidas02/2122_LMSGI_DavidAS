@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 nov. 2021, 20:06:09
+    Author     : Usuario
+*/
+@font-face {
+ font-family: 'Goldman-Regular'; 
+ src:url('../font/Goldman-Regular.ttf')
+ }
+@font-face {
+ font-family: 'Goldman-Bold'; 
+ src:url('../font/Goldman-Bold.ttf')
+ }

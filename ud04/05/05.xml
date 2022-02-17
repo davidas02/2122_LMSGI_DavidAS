@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE Company[
+    <!ELEMENT Company (Employee*)>
+    <!ELEMENT Employee (FirstName,LastName,ContactNo,Email,Address)>
+    <!ELEMENT FirstName (#PCDATA)>
+    <!ELEMENT LastName (#PCDATA)>
+    <!ELEMENT ContactNo (#PCDATA)>
+    <!ELEMENT Email (#PCDATA)>
+    <!ELEMENT Address (City,State,Zip)>
+    <!ELEMENT City (#PCDATA)>
+    <!ELEMENT State (#PCDATA)>
+    <!ELEMENT Zip (#PCDATA)>
+]>
+
+<Company>
+    <Employee>
+        <FirstName>
+            Juan
+        </FirstName>
+        <LastName>
+            Sanchez
+        </LastName>
+        <ContactNo>
+            123456789
+        </ContactNo>
+        <Email>
+            juansanchez@company.com
+        </Email>
+        <Address>
+            <City>
+                Bangalore
+            </City>
+            <State>
+                Karnatka
+            </State>
+            <Zip>
+                560212
+            </Zip>
+        </Address>
+    </Employee>
+</Company>

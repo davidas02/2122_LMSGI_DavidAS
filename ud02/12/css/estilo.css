@@ -1,0 +1,175 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 dic. 2021, 16:35:17
+    Author     : Usuario
+*/
+
+*{
+    font-family: 'IBM Plex Serif', serif;
+}
+body{
+    background-color: black;
+    /*añadiendo un linear-gradient a la imagen de fondo, logro oscurecerla.*/
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url("../images/neflix-website.jpg");
+    background-position:top right;
+    background-attachment:fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+}
+/*La que sigue es otra manera de oscurecer la foto de fondo*/
+/*body:before{
+    content:'';
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}*/
+nav{display: inline;}
+.logo{
+    display:inline-block;
+    color: #ff0000;
+    width: 15%;
+    font-size: 4em;
+    position: relative;
+    float:left;
+    left:  10%;
+    margin-top: 0.75em;
+    font-weight: 500;
+    text-decoration: none;
+    min-width: 200px;
+}
+.inicio{
+    display:inline-block;
+    color:white;
+    background-color: red;
+    width: 15%;
+    text-align: center;
+    font-size: 2.5em;
+    position: relative;
+    float: right;
+    right: 11%;
+    margin-top: 1.25em;
+    padding: 10px 30px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    min-width: 200px;
+}
+.inicio:hover{
+    text-decoration: underline 3px white;
+    text-underline-offset: 10%;
+}
+.container #texto1{
+    position: absolute;
+}
+#texto1{
+    color: white;
+    position:relative;
+    top: 30%;
+    left: 25%;
+    font-size: 45px;
+    line-height: 1.5em;
+}
+form{
+    position:absolute;
+    top: 57%;
+    left:25%;
+}
+#email{
+    background-color: white;
+    position: relative;
+    width: 530px;
+    height: 50px;
+    border-radius: 3%;
+    font-size: 2em;
+    padding-left: 10px;
+}
+.submit{
+    position:relative;
+    float:right;
+}
+#empezar{
+    background-color: red;
+    color: white;position:relative;
+    float:right;
+    width: 272px;
+    height:57px;
+    border-radius: 3%;
+    margin-left: 5px;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+#empezar:hover,#inicioSesion:hover{
+    background-color: white;
+    color:red;
+}
+#principal{
+    position: relative;
+    background-color:black;
+    opacity: 0.8;
+    width: 920px;
+    height: 350px;
+}
+#iniciar{
+    color: white;
+    opacity: 1;
+    text-align: center;
+    font-size: 2.25em;
+    padding-top: 12px;
+    letter-spacing: 3px;
+    margin-top: 0.25em;
+}
+.rellenar{
+    position:relative;
+    left: 13%;
+}
+#password,#escribir,#inicioSesion{
+    opacity: 1;
+    font-size: 1.85em;
+    padding-top: 12px;
+    padding-left: 9px;
+    padding-bottom: 9px;
+    margin: 0.5em 0 0 0 ;
+    width: 650px;
+    vertical-align: middle;
+    /*Pides tamaño máximo 64, como no entiendo a que te refieres, supongo
+    que será a la altura máxima de los elementos*/
+    max-height: 64px;
+}
+#escribir{
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+#inicioSesion{
+    color: white;
+    position: relative;
+    background-color: red;
+    font-size: 0.75em;
+    text-align: center;
+    width: 670px;
+    letter-spacing: 3px;
+    margin: 0.25em auto;
+}
+#labelrecuerdame{
+    color:white;
+    opacity: 0.8;
+    margin-left: 15px;
+    font-size: 1.25em;
+}
+.recuerdame{
+    margin-top: 6.25em;
+margin-left: 12%;
+}

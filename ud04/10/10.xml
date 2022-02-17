@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE prediccion[
+<!ELEMENT prediccion (municipio,dia*)>
+<!ATTLIST prediccion
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT municipio (nombre,provincia)>
+<!ATTLIST municipio id CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT dia (prob_precipitacion,estado_cielo,viento,temperatura)>
+<!ATTLIST dia fecha CDATA  #REQUIRED>
+<!ELEMENT prob_precipitacion (#PCDATA)>
+<!ELEMENT estado_cielo (#PCDATA)>
+<!ATTLIST estado_cielo descripcion CDATA #REQUIRED>
+<!ELEMENT viento (direccion,velocidad)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT velocidad (#PCDATA)>
+<!ELEMENT temperatura (maxima,minima)>
+<!ELEMENT maxima (#PCDATA)>
+<!ELEMENT minima (#PCDATA)>
+]>
+
+<prediccion    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='10.xsd'>
+    <municipio id="49600">
+        <nombre>Benavente</nombre>
+        <provincia>Zamora</provincia>
+    </municipio>
+    <dia fecha="2022-02-07">
+        <prob_precipitacion>1</prob_precipitacion>
+        <estado_cielo descripcion="Soleado">100</estado_cielo>
+        <viento>
+            <direccion>Oeste</direccion>
+            <velocidad>
+                6
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>12</maxima>
+            <minima>-2</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-08">
+        <prob_precipitacion>15</prob_precipitacion>
+        <estado_cielo descripcion="Nuboso">50</estado_cielo>
+        <viento>
+            <direccion>Noroeste</direccion>
+            <velocidad>
+                12
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>14</maxima>
+            <minima>-4</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-09">
+        <prob_precipitacion>14</prob_precipitacion>
+        <estado_cielo descripcion="Soleado">100</estado_cielo>
+        <viento>
+            <direccion>Norte</direccion>
+            <velocidad>
+                1
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>16</maxima>
+            <minima>-2</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-10">
+        <prob_precipitacion>12</prob_precipitacion>
+        <estado_cielo descripcion="Nuboso">50</estado_cielo>
+        <viento>
+            <direccion>Sur</direccion>
+            <velocidad>
+                2
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>16</maxima>
+            <minima>4</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-11">
+        <prob_precipitacion>72</prob_precipitacion>
+        <estado_cielo descripcion="Lluvioso">0</estado_cielo>
+       <viento>
+            <direccion>Este</direccion>
+            <velocidad>
+                3
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>11</maxima>
+            <minima>-2</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-12">
+        <prob_precipitacion>12</prob_precipitacion>
+        <estado_cielo descripcion="Nuboso">50</estado_cielo>
+        <viento>
+            <direccion>Sureste</direccion>
+            <velocidad>
+                14
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>12</maxima>
+            <minima>-2</minima>
+        </temperatura>
+    </dia>
+    <dia fecha="2022-02-13">
+        <prob_precipitacion>42</prob_precipitacion>
+        <estado_cielo descripcion="Lluvioso">0</estado_cielo>
+        <viento>
+            <direccion>Suroeste</direccion>
+            <velocidad>
+                9
+            </velocidad>
+        </viento>
+        <temperatura>
+            <maxima>13</maxima>
+            <minima>1</minima>
+        </temperatura>
+    </dia>
+</prediccion>

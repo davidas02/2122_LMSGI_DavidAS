@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:simpleType name="tipoTiempo">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="receta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre"/>
+                <xs:element name="descripcion"/>
+                <xs:element name="tiempo">
+                    <xs:complexType>
+                        <xs:attribute name="preparacion" type="tipoTiempo"/>
+                        <xs:attribute name="coccion" type="tipoTiempo"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ingredientes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ingrediente" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre_ing" type="xs:string"/>
+                                        <xs:element name="cantidad" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="unidad">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:pattern value="chorro|pizca|cucharada|mililitros|gramos"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="instrucciones">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="paso" type="xs:string" minOccurs="0" maxOccurs="10"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="plato">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="primero|segundo|tercero"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

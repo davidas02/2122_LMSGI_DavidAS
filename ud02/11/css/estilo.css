@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Goldman-Regular',cursive;
+    margin:0;
+}
+/*Para esta práctica no incluyo archivo reset.css, he encontrado que los formatos por 
+defecto de todos los navegadores se ajustaban de entrada mucho al maquetado que pides.*/
+body{
+    width: 100%;
+}
+nav{
+    background-color: grey;
+    width: 100%;
+}
+/*Barra de navegación superior*/
+.topmenu{
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+}
+.topmenu li{
+    display: inline-block;
+}
+.topmenu li a{
+    padding: 10px 20px;
+    font-weight: 500;
+}
+/*con text-underline-offset sobre el elemento activo, puedo colocar la decoración del texto
+donde yo quiera. Válido con píxeles y todas las medidas calculadas.
+text-decoration admite dos parámetros (color y posición del subrayado), si le añades el 
+tamaño, netbeans lo marca como erróneo pero los navegadores si lo interpretan bien.
+He observado que Netbeans da muchos warning y erroes similares a los que acabo de comentar.
+Creo que le vendría muy bien a este IDE una actualización que lo integrara mejor con 
+html y css*/
+.topmenu .active{
+    text-decoration: underline red 3px;
+    text-underline-offset: 20%;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color:black;
+}
+/*Elemento principal del body*/
+.clearfix{
+    display: inline-block;
+    position: relative;
+    left: -1.5%;
+    margin-top: 1em;
+    clear:both;
+}
+h1,h2{
+    text-transform: uppercase;
+    color: #c6274f;
+}
+/*Ya he encontrado la utilidad de referir los selectores de esta manera.
+En algunos navegadores, le cuesta recibir el valor de la clase si esta lleva
+un espacio, haciéndolo como muestro a continuación, ese problema desaparece.*/
+[class='column sidemenu']{
+    display: inline-block;
+    width:30%;
+    float:left;
+}
+[class='column sidemenu'] li{
+    margin-bottom: 3px;
+    background-color: grey;
+    padding: 9px;
+    width: 53%;
+}
+[class='column sidemenu'] li a{
+    color:white;
+}
+[class='column content']{
+    display: inline-block;
+    position:relative;
+    left: -12%;
+    width:70%;
+    float:right;
+    margin-bottom: 60px;
+}
+.header h1{
+    border:3px #990066 solid;
+    text-align: center;
+    padding:15px;
+    font-size: 1.5em;
+}
+h2{
+    font-size: 1.25em;
+    padding: 9px 6px;
+}
+article{width: 95%;}
+footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: grey;
+
+}
+footer p{margin-bottom: 10px;}
+

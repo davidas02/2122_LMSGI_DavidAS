@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="escritor" type="xs:ENTITY" fixed="Miguel de Cervantes"/>
+                           <xs:element name="obra" type="xs:ENTITY"  fixed="El Quijote"/>
+                           <xs:element name="fecha" type="xs:ENTITY"  fixed="29/09/1547"/>
+    <xs:element name="textos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="texto" type="xs:string" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                           
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

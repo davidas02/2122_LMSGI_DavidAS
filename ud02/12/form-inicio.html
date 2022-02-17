@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>HTML 12 Ricardo Santiago Tomé</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/estilo.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <meta name="author" content="Ricardo Santiago Tomé">
+        <meta name="application-name" content="NEFLIX">
+        <meta name="description" content="Multimedia en streaming">
+        <meta name="keywords" content="analítica web, seo, web semántica, seo semántico, analytics, netflix, streaming, series
+              películas, documentales,contenido a la carta, contenido bajo demanda, suscripción" >
+        <!-- Recomendado 5 o 8 palabras clave, Cada palabra clave puede estar constituida por hasta 4 o 5 palabras. -->
+        <meta name="robots" content="index,nofollow">
+        <link rel="shortcut icon" type="image/png"  sizes="16x16" href="../../images/favicon/R.png">
+        <link rel="shortcut icon" type="image/ico"  sizes="16x16" href="../../images/favicon/R.ico">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-/favicon16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+            /*Estas reglas de estilo están aquí porque son específicas para este
+            form-inicio.html*/
+            .logo{
+                position: absolute;
+            }
+            .nav{
+                position: absolute;
+            }
+            main{
+                position: relative;
+                top: 27%;
+            }
+            .inicio{
+                /*Una forma rápida de hacer invisible el fieldset*/
+                background-color: inherit;
+                width: 670px;
+                position:absolute;
+                margin:  0.15em 0;
+            }
+            /*Tras buscar en Google fonts, vi que esta es la fuente que se asemejaba más a la de tús ejemplos.*/
+            
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="logo">NEFLIX</a>
+        </nav>
+        <main>
+            <form  id="principal" method="GET" action="/loginNeflix.php" target="blank">
+                <div>
+                    <fieldset>
+                        <div>
+                            <h1 id="iniciar">Iniciar sesión</h1>
+                        </div>
+                        <div class="rellenar">
+                            <textarea id="escribir" name="usuario" maxlength="32"  cols="64" rows="1" 
+                                       placeholder="Correo electrónico o número de teléfono"></textarea>
+                        </div>
+                        <div class="rellenar">
+                            <input type="password" name="pass" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" 
+                                  title="Una contraseña válida es un conjuto de caracteres,
+                                  donde cada uno consiste de una letra mayúscula o minúscula, o un dígito.
+                                  La contraseña debe empezar con una letra y contener al menos un dígito"
+                                  placeholder="Contraseña" maxlength="32" required id="password">
+                        </div>
+                        <div class="inicio">
+                            <input type="submit" value="Iniciar sesión" id="inicioSesion">
+                        </div>
+                        <div class='recuerdame'>
+                            <p><input type="checkbox" name="recuerdame" value="Recuérdame" id="recuerdame"><label for="recuerdame" id='labelrecuerdame'>Recuérdame</label></p>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

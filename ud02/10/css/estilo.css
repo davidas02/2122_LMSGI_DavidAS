@@ -1,0 +1,153 @@
+*{
+    font-family: 'arial',sans-serif;
+    font-weight: 500;
+}
+body{
+    width: 566px;
+    max-width:80%;
+    margin:0 0 0 1em;
+    background-image: url('../images/Le_petit_prince.png');
+    background-repeat: no-repeat;
+    background-size: 17.75em;
+    background-position-x: 40.5%;
+}
+/*Por defecto pongo una posición absolute a los div, ya las cambio a mi
+conveniencia en cada caso particular.*/
+div{
+    position:absolute;
+    z-index: 2;
+    width: 533px;
+    font-size: 15px;
+}
+div,h1,.par1{width: 533px;}
+h1{
+    font-variant: small-caps;
+    font-size: 2em;
+    background-color: #ffa03a;
+    color:#FF4500;
+}
+[class=par1]{
+    color: #009900;
+    text-shadow: 1px 1px 1px #00ff00;
+    background-color: lightblue;
+    font-weight: 700;
+}
+[class=static]{
+    border:3px #FFB973 solid;
+    position: static;
+    padding: 9px 0 9px 9px;
+    width: 512px;
+}
+[class=relative]{
+    border: 3px dotted #cc00cc;
+    position: relative;
+    left: 12%;
+    padding: 9px 6px;
+    width: 500px;
+}
+[class=fixed]{
+    position: fixed;
+    left: 33%;
+    bottom: 12%;
+    background-color: #ffb53b;
+    border: 4px #009900 dashed;
+    padding: 9px;
+    width: 260px;
+    /*Con z-index: -1 hago que este elemento no pueda tapar a ningún otro
+    mientras se hace scroll.*/
+    z-index: -1;
+}
+[class=relative1]{
+    border: 3px #009900 solid;
+    position:relative;
+    padding: 1em 0 114px 3px;
+    width: 533px;
+    height: 36px;
+}
+[class=absolute1]{
+    width: 255px;
+    position:absolute;
+    border: 3px #00ff00 solid;
+    left: 50%;
+    bottom: 0;
+    margin:3em 3px 3px 0;
+    padding:9px 0 49px 3px;
+}
+[class=sticky]{
+    /*sticky no hes reconocido por netbeans. Añado webkit para Safari*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: #009900;
+    text-align: center;
+    color: #00ff00;
+    border-radius: 25px;
+    height: 24px;
+    text-shadow:1px 1px 1px #00ff00;
+    border: 3px #00ff00 solid;
+    padding-top: 6px;
+    /*Dándole un z-index:3 al sticky, consigo que se muestre por encima de
+    los demás elementos al hacer scroll*/
+    z-index: 3;
+}
+.relative1 img{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    width: 153px;
+}
+.relative1 p{
+    position:absolute;
+    z-index: 2;
+    padding-left: 6px;
+    padding-right: 6px;
+    opacity: 0.95;
+}
+.container{
+    border: 3px #cc00cc solid;
+    width: 525px;
+    height: 300px;
+}
+.container .img2{
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+}
+.container div{
+    position: absolute;
+    background-color: orange;
+    color: #aa0b0f;
+    border:3px solid #aa0b0f;
+    width: 99px;
+    text-align: center;
+    font-weight: bolder;
+    height: 25px;
+    padding-top: 6px;
+}
+.topleft{
+    top: 1%;
+    left: 1%;
+}
+.topright{
+    top: 1%;
+    right: 1%;
+}
+.center{
+    top: 50%;
+    right: 40%;
+}
+.bottomleft{
+    bottom: 1%;
+    left: 1%;
+}
+.bottomright{
+    bottom: 1%;
+    right: 1%;
+}
+#cssValido{
+    display:flex;
+    position: fixed;
+    right:  3%;
+    bottom: 0;
+}

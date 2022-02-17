@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE grupo[
+<!ELEMENT grupo (estudiante+)>
+<!ATTLIST grupo
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+             
+<!ELEMENT estudiante (#PCDATA)>
+<!ATTLIST estudiante codigo ID #REQUIRED
+                     tutor IDREFS #IMPLIED>
+]>
+
+<grupo 
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='07.xsd'>
+    <estudiante codigo="E001" >
+        Leticia
+    </estudiante>
+     <estudiante codigo="E002" tutor="E001 E003" >
+        Luis
+    </estudiante>
+     <estudiante codigo="E003" tutor="E001">
+        Ricardo
+    </estudiante>
+</grupo>

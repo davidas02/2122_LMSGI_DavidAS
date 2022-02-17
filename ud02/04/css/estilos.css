@@ -1,0 +1,203 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 nov. 2021, 18:03:16
+    Author     : Usuario
+*/
+html{
+    text-justify: distribute;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Oswald", sans-serif;
+    /*El atributo min-width: max-content hace que el contenido de toda la página
+    se reproduzca en el máximo tamaño en que esté guardado dicho contenido.*/
+    /*min-width: max-content;*/
+}
+body{
+    box-sizing: border-box;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size:cover;
+    background-image: linear-gradient(to right, rgba(163, 131, 28), rgba(163, 93, 28));
+    height:auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    position: absolute;
+}
+h1,h2{
+    margin: 2em;
+}
+h1,h2,#audio{
+    text-align: center;
+}
+h1{
+    color: chocolate;
+    background-color: aliceblue;
+    border: solid 4px deeppink;
+    border-radius: 5%;
+    min-width: 12em;
+    margin:2em 6em 0 6em;
+    font-size: 60px;
+}
+h2{
+    color: cornsilk;
+    font-size:30px;
+    margin-left: 16em;
+    margin-right: 16em;
+}
+h2,h3{
+    border-bottom: solid 2px fuchsia;
+}
+h3{
+    color:khaki;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 18em;
+    margin-right: 18em;
+}
+.imagen{
+    border-radius: 5%;
+}
+.imagen,.audio{
+    display:inline-block;
+    margin-top: 3em;
+}
+.divAudio{margin-left: 19em;}
+figcaption{
+    margin-top: 1em;
+}
+div.primera,div figure{
+    float: left;
+}
+.audioPrimera{
+    margin-top: 9em;
+}
+.audioSegunda{
+    margin-top: 4em;
+}
+#figureMedio{
+    display: inline;
+    float: right;
+    margin-right: 6em;
+}
+#imagenMedio,#audioMedio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#imagenMedio{
+    display: inline;
+    margin-left: 5em;
+}
+#audioMedio{
+    display: inline;
+    margin-right: 5em;
+}
+.divAudio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin:2em 2em 4em 10em;
+    color: navy;
+}
+#video{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 2em 0 0 0;
+}
+.videoIframe{
+    margin: 4em;
+}
+#rodandoIframe,#rodandoVideo{
+    margin: 0 2em 2em 2em;
+}
+.pPrimera{margin-top:1em;}
+#pUltima{margin-bottom: 3em;}
+.pPrimera,#pUltima{
+    color: navy;
+}
+#image{
+    background-image: url(../media/imagen/anillos.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:cover;
+    width: 100%;
+    height: 600px;
+    opacity: 1.6;
+    position: relative;
+    min-height: 600px;
+    min-width: 100%;
+    margin-top: 3em;
+}
+#llanto,#bajando,#familia,#banderas{
+    position:absolute;
+    opacity: 4;
+    min-height: 25px;
+    min-width: 25px;
+    border-radius: 5%;
+}
+#llanto{
+    left: 2%;
+    top: 3%;
+    border: 8px blue solid;
+}
+#bajando{
+    left: 79.5%;
+    top: 3%;
+    border: 8px red solid;
+}
+#familia{
+    top: 67%;
+    border: 8px yellow solid;
+    left: 2%;
+}
+#banderas{
+    top: 67%;
+    border: 8px green solid;
+    left: 79.5%;
+}
+/*Descomentar el código que sigue para ver como los videos se reproducen en el 100% del ancho de pantalla
+sea en el dispositivo que sea. Puro diseño responsive.*/
+/*
+.videoIframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0;
+    overflow: hidden;
+}
+
+.videoIframe iframe,
+.videoIframe object,
+.videoIframe embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/

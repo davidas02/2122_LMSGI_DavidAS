@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 nov. 2021, 11:05:22
+    Author     : Usuario
+*/
+*{text-align: center;}
+div div{
+    width: 180px;
+    height:180px;
+    border:10px solid black;
+    display:inline-block;
+    margin: 5px;
+    padding:5px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: darkseagreen;
+    text-align: center;
+    border-radius: 3%;
+}
+div:nth-child(1) div{
+    background-image:url("../images/punto.png");
+    background-position: center center;
+}
+div:nth-child(2) div{
+    background-image:url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left;
+}
+div:nth-child(3) div{
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,center center;
+}
+div:nth-child(4) div{
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right;
+}
+div:nth-child(5) div{
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right,center center;
+}
+div:nth-child(6) div{
+    background-image:url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    background-position: bottom right, top left,bottom left,top right,left center,right center;
+}
+h1{
+    font-family: sans-serif;
+    font-size: 55px;
+    color: cadetblue;
+    font-weight: bold;
+    letter-spacing: 16px;
+    margin: 0.5em 4em 0.5em 4em;
+}
+h1:hover{
+    background-color: #D4AC0D;
+    color:brown;
+     margin: 0.5em 4em 0.5em 4em;
+}
+/*div:nth-child(even) div:hover{background-color: #D4AC0D}
+div:nth-child(odd) div:hover{background-color: cornsilk}*/
+div:nth-child(odd) div:nth-child(even):hover{background-color: aqua}
+div:nth-child(odd) div:nth-child(odd):hover{background-color: coral}
+div:nth-child(even) div:nth-child(odd):hover{background-color: #D4AC0D}
+div:nth-child(even) div:nth-child(even):hover{background-color: chartreuse}
+div:nth-child(6) div:nth-child(odd):hover{
+    border-radius: 50%;background-size:30%;
+    background-position:  35% 35%,65% 35%,5% 95%,18% 80%,35% 75%,50% 73%,65% 75%,80% 80%,90% 95%;
+    background-image: url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+}
+div:nth-child(6) div:nth-child(even):hover{
+    width:180px;
+    height: 90px;
+    border-radius: 50%;
+    background-size:30%;
+    background-position:  35% 35%,65% 35%,5% 65%,15% 80%,28% 93%,45% 99%,60% 99%,75% 93%,85% 80%,95% 65%;
+    background-image: url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),
+        url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png"),url("../images/punto.png");
+    margin-bottom: 3em;
+}

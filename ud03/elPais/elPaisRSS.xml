@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Fecha 13/01/2022
+Descripcion: Noticias periodico el Pais
+Documento: RSS
+-->
+<rss version="2.0">
+    <channel>
+        <title> El pais RSS</title>
+        <link>https://elpais.com</link>
+        <description>
+            Es un periodico nacional con noticias nacionales e internacionales 
+            De IZQUIERDAS
+        </description>
+        <language>
+                es-es
+            </language>
+        <item>
+            <title>
+                Almaty, zona cero de las protestas de Kazajistán
+            </title>
+            <link>
+                https://elpais.com/internacional/2022-01-13/almaty-zona-cero-de-las-protestas-de-kazajistan.html
+            </link>
+                <description>
+                La ciudad que vivió las escenas más duras de las 
+                revueltas recupera la normalidad bajo un férreo 
+                control militar
+            </description>
+            <guid isPermaLink="true">
+                https://elpais.com/internacional/2022-01-13/almaty-zona-cero-de-las-protestas-de-kazajistan.html
+            </guid>
+            <category>
+                Internacional
+            </category>
+            <source>
+                https://elpais.com/internacional/2022-01-13/almaty-zona-cero-de-las-protestas-de-kazajistan.html
+            </source>
+            <![CDATA[<img src="https://imagenes.elpais.com/resizer/YlC0a_MEHlGMr0gKUgf1jKMSn7E=/980x0/filters:focal(432x1618:442x1628)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/RZTET3UXERC3DEWN7424C6ZTDM.jpg" alt="kazajistan">]]>
+        </item>
+        <item>
+            <title>
+                Ancelotti: “La contra es nuestra mejor arma”
+            </title>
+            <link>
+                https://elpais.com/deportes/2022-01-12/ancelotti-la-contra-es-nuestra-mejor-arma.html
+            </link>
+            <description>
+               El entrenador del Madrid admite que no es muy estético irse atrás, 
+                pero subraya la eficacia del plan por las características de sus 
+                jugadores
+            </description>
+            <guid isPermaLink="true">
+                https://elpais.com/deportes/2022-01-12/ancelotti-la-contra-es-nuestra-mejor-arma.html
+            </guid>
+            <category>
+                Deportes
+            </category>
+            <source>
+               https://elpais.com/deportes/2022-01-12/ancelotti-la-contra-es-nuestra-mejor-arma.html
+            </source>
+        </item>
+    </channel>
+</rss>

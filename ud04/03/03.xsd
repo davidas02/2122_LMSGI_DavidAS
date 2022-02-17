@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="hechos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hecho" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="descripcion" type="xs:string"/>
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dia" type="xs:integer"/>
+                                        <xs:element name="mes" type="xs:integer"/>
+                                        <xs:element name="anyo" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

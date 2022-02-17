@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE curriculum[
+<!ELEMENT curriculum (nombre,apellidos,anyo_nac,residencia,contacto)>
+<!ATTLIST curriculum
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT anyo_nac (#PCDATA)>
+<!ELEMENT residencia (ciudad,pais)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT contacto (telefono,email,linkedin,descripcion,competencias?,formaciones?,experiencias?)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT linkedin (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT competencias (competencia+)>
+<!ELEMENT competencia EMPTY>
+<!ATTLIST competencia nombre CDATA #REQUIRED
+                      nivel (alto|medio|bajo) "medio">
+<!ELEMENT formaciones (formacion+)>
+<!ELEMENT formacion EMPTY>
+<!ATTLIST formacion titulo CDATA #REQUIRED
+                    centro CDATA #REQUIRED
+                    anyo   CDATA #IMPLIED>
+<!ELEMENT experiencias (experiencia+)>
+<!ELEMENT experiencia (puesto,empresa,inicio,fin?)>
+<!ELEMENT puesto (#PCDATA)>
+<!ELEMENT empresa (#PCDATA)>
+<!ELEMENT inicio (#PCDATA)>
+<!ELEMENT fin (#PCDATA)>
+]>
+<curriculum
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='04.xsd'>
+    <nombre>
+        David
+    </nombre>
+    <apellidos>
+        Aparicio Sir
+    </apellidos>
+    <anyo_nac>
+        2002  
+    </anyo_nac>
+    <residencia>
+        <ciudad>
+            Benavente
+        </ciudad>
+        <pais>
+            España
+        </pais>
+    </residencia>
+    <contacto>
+        <telefono>722289853</telefono>
+        <email>
+            david.apasir@educa.jcyl.es
+        </email>
+        <linkedin>
+            https://es.linkedin.com/apa02
+        </linkedin>
+        <descripcion>
+            Gran trabajador
+        </descripcion>
+        <competencias>
+            <competencia nombre="Inglés" nivel="medio"/>
+        </competencias>
+        <formaciones>
+            <formacion titulo="SMR" centro="IES LOS SAUCES" anyo="2020"/>
+        </formaciones>
+        <experiencias>
+            <experiencia>
+                <puesto>
+                    AYTE. Cocina
+                </puesto>
+                <empresa>
+                    Restaurante TMJ
+                </empresa>
+                <inicio>
+                    2020
+                </inicio>
+            </experiencia>
+        </experiencias>
+    </contacto>
+</curriculum>

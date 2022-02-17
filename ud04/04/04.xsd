@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="curriculum">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="anyo_nac" type="xs:gYear"/>
+                <xs:element name="residencia">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ciudad" type="xs:string"/>
+                            <xs:element name="pais" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contacto">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="telefono" >
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{9}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Za-z0-9]*[.]{1}[@]{1}[A-Za-z0-9]*[.]{1}[A-Za-z0-9]*[.]{1}[a-z]*"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="linkedin" type="xs:string"/>
+                            <xs:element name="descripcion" type="xs:string"/>
+                            <xs:element name="competencias">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="competencia" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="nombre" type="xs:string"/>
+                                                <xs:attribute name="nivel" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="formaciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="formacion" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="titulo" type="xs:string"/>
+                                                <xs:attribute name="centro" type="xs:string"/>
+                                                <xs:attribute name="anyo" type="xs:gYear"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="experiencias">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="experiencia" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="puesto" type="xs:string"/>
+                                                    <xs:element name="empresa" type="xs:string" />
+                                                    <xs:element name="inicio" type="xs:gYear"/>
+                                                    <xs:element name="fin" type="xs:gYear" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

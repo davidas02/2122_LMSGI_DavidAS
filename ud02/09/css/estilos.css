@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 nov. 2021, 18:16:40
+    Author     : Ricardo Santiago Tomé
+*/
+body{
+    background-color:#F2F4F4;
+    width: 1024px;
+    margin:0 auto;
+    color: white;
+    box-sizing: border-box;
+}
+#headerPrincipal{
+    width: 100%;
+    background-image: url("../images/ies_los_sauces.jpg");
+    /*Posicionando imagen dentro de header.*/
+    background-repeat: no-repeat;
+    background-position: 1% 24%;
+    background-attachment: inherit;
+    background-size: 3em;
+    padding: 0 0 3px 0;
+}
+#headerPrincipal h1{
+    padding-left: 3.5em;
+    padding-top: 0.30em;
+    font-size: 1.25em;
+}
+/*Leyenda debajo del logo del instituto.*/
+#headerPrincipal p{
+    font-size: 0.5em;
+    padding-top: 2.9em;
+    padding-left: 6px;
+    margin-left: -0.5em;
+    font-style: italic;
+    color: #99ff99;
+}
+#headerPrincipal,nav,#footerPagina,aside footer{background-color: green;}
+nav a{
+    /*Los links no heredan el color, hay que especificárselo.*/
+    color:white;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding:  3px;
+}
+/*Dejo invisible un header que el validator de la w3c school me pide para evitar
+warning*/
+aside h6,section h6{visibility: hidden;}
+/*Dejo funcionando el nav que se ajusta al que tú pides, pero yo he trabajado también
+uno para que haya una sensación de movimiento al pasar el ratón por encima de ellos.
+Te lo dejo a continuación 
+con un :hover aplicado para que al pasar por encima, puedas ver las dos propuestas.*/
+#navegacion{
+    list-style-type:none;
+    text-transform: uppercase;
+}
+nav{ padding-bottom:30px;}
+#navegacion a:hover{
+    margin: 1em;
+}
+ul{ padding: 12px;}
+li{
+    display:inline;
+    float:left;
+}
+li > a{
+    margin-right:0.5em;
+    font-size:1.5em;
+}
+aside footer{margin-top: 1em;}
+[id=ciclo] h2{
+    margin-left: 1em;
+}
+/*Jugando con focus,hover y colores de fuentes para mostrar u ocultar texto al gusto*/
+#ciclo h2{font-size: 20px;}
+#ciclo:focus{
+    visibility: visible;
+}
+#ciclo:hover{
+    visibility: hidden;
+    transition:  top 1s;
+}
+#ciclo p{
+    color:green;
+    font-size: 30px;
+}
+#ciclo p:hover{
+    visibility: visible;
+    color:green;
+    text-align: center;
+}
+article{
+    padding: 9px;
+    margin: 12px auto;
+}
+article header{
+    font-size: 27px;
+    border: 1px white dotted;
+    padding: 6px;
+    margin: 9px;
+}
+table{
+    width:70%;
+    margin:0 auto;
+    /*empty-cells: hide hace que las celdas sin contenido sean invisibles*/
+    empty-cells: hide;
+}
+table,tr,td,th{box-sizing: border-box;
+    border:1px white;
+    border-style:dotted;
+    vertical-align: middle;
+    /*Hay que establecer el border-collapse como separate para que el 
+    border-spacing surta efecto.*/
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+td,th{width: 180px;
+height: 40px}
+.tabla{text-align:center;}
+#horario{background-color: #666666;}
+/*Si establezco un color de background y a los elementos que a mi me interese
+se los hago heredar, siempre que cambie el color del background, estaré cambiando también
+el fondo de los elementos que he especificado lo hereden.*/
+.horas{
+    background-color:inherit;
+    height:55px;
+    width:100px;
+}
+.dias{
+    height: 50px;
+    background-color:inherit;
+}
+/*Con estas clases hago que tanto las celdas correspondientes a cada módulo en la tabla
+horario como sus tablas individuales así como sus correspondientes celdas en las
+tablas de claves tengan el mismo color.
+Con la variante oscura símplemente establezco el color de las celdas elegidas
+de cada tabla.*/
+.lmsgi{background-color:#ffcc00;}
+.lmsgiOscura{background-color:#D4AC0D;}
+.bdd{background-color:salmon;}
+.bddOscura{background-color: #ff6666;}
+.prog{background-color:#ff6600;}
+.progOscura{background-color: #cc0000;}
+.edd{background-color:#00ff00;}
+.eddOscura{background-color: #009966}
+.sinf{background-color:#D4AC0D;}
+.sinfOscura{background-color: #666600;}
+.fol{background-color:#666666;}
+.folOscura{background-color: #999999;}
+.footerArticulos{	
+    font-size:15px;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 6px;
+}
+.claves{
+    background-color: lightskyblue;
+    margin: 12px auto;
+    text-align: center;
+    width: 80%;
+}
+.claves caption{
+    color: lightskyblue;
+    font-style: italic;
+    font-weight: bold;
+    caption-side: bottom;
+    margin-top: 3px;
+}
+/*Uso del selector de hermano adyacente*/
+main+footer{/*Con display flex logro que el elemento p con una imagen del w3c school
+    se coloque automáticamente al lado de los elementos precedentes en el html.*/
+    display:flex;
+    padding: 9px;
+    font-style: italic;
+    font-size: 23px;
+}
+address a{
+    font-style: italic;
+    margin: 0 1em;
+    color: #76D7C4;
+    text-shadow:2px 2px 2px #666666;
+    text-transform: uppercase;
+}
+#imgid{
+    border:0;
+    width:88px;
+    height:31px;
+}

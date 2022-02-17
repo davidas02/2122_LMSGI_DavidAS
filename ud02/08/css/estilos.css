@@ -1,0 +1,107 @@
+*{
+    font-family: 'calibri', 'arial', sans-serif;
+    font-weight: 500;
+}
+body{
+    width: 1024px;
+    margin-left: 200px;
+    margin-right: 300px;
+    background-image: url("../images/Le_petit_prince.png");
+    background-repeat: no-repeat;
+    background-position: 72% 0;
+    background-attachment: inherit;
+    background-size: 13em;
+    border-collapse: collapse;
+}
+h1{
+   color:#92BE9C;
+   font-family: 'Goldman-Bold',cursive;
+   font-size: 1.5em;
+   letter-spacing: 0.3em;
+   text-decoration: underline RGB(241, 172, 81)wavy;
+   text-transform: capitalize;
+   margin:1em auto;
+}
+main hr{
+     border: 1px #cc0033 solid;
+    /*border-width: thin;*/
+    height: 5px;
+    width: 75%;
+    background-color: #cc0033;
+}
+main p{
+    font-family: 'Goldman-Regular',cursive;
+    background-color:#92BE9C;
+    color: #F5F5F4;
+    padding: 0.5em 0 0.5em 0.3em;
+}
+ul,ol{
+    margin:1em auto;
+}
+ul li{
+    margin-left: 2em;
+}
+.lista1 li{
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.lista1 li,.lista2 li,.lista3 li{
+    border-left:2px #cc0033 dotted;
+    border-right:2px #cc0033 dotted;
+    border-top:2px #cc0033 dotted;
+}
+ul li:last-child{
+    border-bottom: 2px #cc0033 dotted;
+}
+p span{
+    color:#780000;
+}
+.lista2{
+    list-style: square;
+    list-style-position: outside;
+}
+.lista3{
+    list-style: square;
+    list-style-position: inside;
+    list-style-image: url("../images/sqpurple.png");
+}
+.lista4{
+    border: 3px dashed #cc0033;
+    background-color: RGB(137, 0, 12);
+    padding: 5px 15px;
+}
+.lista4 li{
+    background-color: #cc0033;
+    margin: 5px;
+    list-style: none;
+    color:RGB(137, 0, 12);
+}
+.lista4 li:before{
+    content:"#";
+    color: #cc0033;
+    margin:-1em;
+    list-style-position: outside;
+    letter-spacing: 2em;
+}
+.lista5{
+    margin-left: 2.5em;
+}
+.lista5 li{
+    background-color: RGB(137, 0, 12);
+    border-left: 8px solid #cc0033;
+    list-style: none;
+    margin-left: -2.5em;
+    color: #cc0033;
+}
+.lista6{
+    list-style-position: outside;
+    list-style: disc;
+    color: RGB(137, 0, 12);
+    margin-left: -2em;
+}
+.lista6 li{
+    border-left:4px red dotted;
+    border-right:4px red dotted;
+    border-top:4px red dotted;
+}
+.lista6 li:last-child{border-bottom: 4px red dotted;}

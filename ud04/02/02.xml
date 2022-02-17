@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE mundo [
+    <!ELEMENT mundo (fila+)>
+    <!ATTLIST mundo
+             xmlns:xsi CDATA #IMPLIED
+             xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+    <!ELEMENT fila (continente,pais,capital)>
+    <!ELEMENT continente (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT capital (#PCDATA)>
+]>
+
+<mundo
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='02.xsd'>
+    <fila>
+        <continente>
+            Europa
+        </continente>
+        <pais>
+            Alemania
+        </pais>
+        <capital>
+            Berlin
+        </capital>
+    </fila>
+    <fila>
+        <continente>
+            America
+        </continente>
+        <pais>
+            Argentina
+        </pais>
+        <capital>
+            Buenos Aires
+        </capital>
+    </fila>
+    <fila>
+        <continente>
+            America
+        </continente>
+        <pais>
+           Bahamas 
+        </pais>
+        <capital>
+            Nassau
+        </capital>
+    </fila>
+    <fila>
+        <continente>
+            Asia
+        </continente>
+        <pais>
+            Talibania
+        </pais>
+        <capital>
+            Kabul
+        </capital>
+    </fila>
+    <fila>
+        <continente>
+            Asia
+        </continente>
+        <pais>
+            Arabia Saudita
+        </pais>
+        <capital>
+            Riad
+        </capital>
+    </fila>
+</mundo>
