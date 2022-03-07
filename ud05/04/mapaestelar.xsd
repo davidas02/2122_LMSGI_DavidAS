@@ -1,0 +1,125 @@
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="mapaEstelar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="constelacion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombreEspanol" type="xs:string"/>
+                            <xs:element name="superficie">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:float">
+                                        <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="estrellas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="asterismo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:maxExclusive value="1000"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="masBrillante">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombreEstrella" type="xs:string"></xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="luminosidad">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:float">
+                                                            <xs:minInclusive value="0"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                    <xs:attribute name="numero" type="xs:positiveInteger"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="objetos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cumulos" type="xs:boolean" default="false"/>
+                                        <xs:element name="nebulosas" type="xs:boolean" default="false"/>
+                                        <xs:element name="galaxias" type="xs:boolean" default="false"/>
+                                        <xs:element name="cuasares" type="xs:boolean" default="false"/>
+                                        <xs:element name="lluviaDeMeteoros" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>   
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="colindantes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="observacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hemisferio">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="Norte|Sur"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="mes">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:minInclusive value="1"/>
+                                                    <xs:maxInclusive value="12"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="hora" type="xs:time"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nombreLatin" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="estrella">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="const" type="xs:string"/>
+                            <xs:element name="distancia" >
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:restriction base="xs:float">
+                                            <xs:minInclusive value="0"/>
+                                        </xs:restriction>
+                                    </xs:simpleContent>
+                                    <xs:attribute name="medida" type="xs:string" fixed="años luz"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="luminosidad" type="xs:positiveInteger">
+                                <xs:complexType>
+                                    <xs:attribute name="medida" type="xs:string"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="temperatura">
+
+                            </xs:element>
+                            <xs:element name="masa" type="xs:positiveInteger">
+                                <xs:complexType>
+                                    <xs:attribute name="medida" type="xs:string"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
