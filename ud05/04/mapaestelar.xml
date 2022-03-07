@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapaEstelar SYSTEM "mapaestelar.dtd">
+<mapaEstelar >
+    <constelacion nombreLatin="Ursa Maior">
+        <nombreEspanol>Osa Mayor</nombreEspanol>
+        <superficie>1279,7</superficie>
+        <estrellas numero="209">
+            <asterismo>7</asterismo>
+            <masBrillante luminosidad="">
+                <nombreEstrella>Alioth</nombreEstrella>
+            </masBrillante>
+        </estrellas>
+        <objetos>
+            <cumulos>false</cumulos>
+            <nebulosas>true</nebulosas>
+            <galaxias>true</galaxias>
+            <cuasares>false</cuasares>
+            <lluviaDeMeteoros>Kappa Ursa Mayóridas</lluviaDeMeteoros>
+            <lluviaDeMeteoros>Lambda Ursa Mayóridas</lluviaDeMeteoros>
+            <lluviaDeMeteoros>Psi Ursa Mayóridas</lluviaDeMeteoros>
+            <lluviaDeMeteoros>Ursa Mayóridas de octubre</lluviaDeMeteoros>
+        </objetos>
+        <colindantes>
+            <nombre>Bootes</nombre>
+            <nombre>Camelopardalis</nombre>
+            <nombre>Leo</nombre>
+        </colindantes>
+        <observacion>
+            <hemisferio>Norte</hemisferio>
+            <mes>04</mes>
+            <hora>21:00</hora>
+        </observacion>
+    </constelacion>
+    <estrella>
+        <nombre>Alioth</nombre>
+        <const>Osa Mayor</const>
+        <distancia medida="años luz">81</distancia>
+        <luminosidad medida="soles">108</luminosidad>
+        <temperatura medida="K">9400</temperatura>
+        <masa medida="soles">3</masa>
+    </estrella>
+</mapaEstelar>

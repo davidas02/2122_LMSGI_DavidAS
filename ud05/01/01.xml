@@ -66,8 +66,8 @@
     <sesiones intensidad="moderada"> 			
       <minutos_sesion>45
       </minutos_sesion>
-      </sesiones_semana>
-      <sesiones_semana>2
+      <sesiones_semana>
+      </sesiones_semana>2
     </sesiones>
   </actividad>
   <actividad nivel="adultos">
