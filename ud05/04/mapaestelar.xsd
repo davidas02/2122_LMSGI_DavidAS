@@ -104,22 +104,26 @@
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="luminosidad" type="xs:positiveInteger">
-                                <xs:complexType>
-                                    <xs:attribute name="medida" type="xs:string"></xs:attribute>
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="medida" type="xs:string" default="soles"/>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="temperatura">
-
+                            <xs:element name="temperatura" type="xs:integer" default="K">
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="medida" type="xs:string"/>
+                                </xs:complexType>
                             </xs:element>
                             <xs:element name="masa" type="xs:positiveInteger">
-                                <xs:complexType>
-                                    <xs:attribute name="medida" type="xs:string"></xs:attribute>
+                                <xs:complexType mixed="true" >
+                                    
+                                    <xs:attribute name="medida" type="xs:string" default="soles"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+            <xs:attribute name="nombreLatin" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

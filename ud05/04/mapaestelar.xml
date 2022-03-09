@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapaEstelar SYSTEM "mapaestelar.dtd">
-<mapaEstelar xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-xsi:noNamespaceSchemaLocation='mapaestelar.xsd'>
+<mapaEstelar >
     <constelacion nombreLatin="Ursa Maior">
         <nombreEspanol>Osa Mayor</nombreEspanol>
-        <superficie>1279.7</superficie>
+        <superficie>1279,7</superficie>
         <estrellas numero="209">
             <asterismo>7</asterismo>
-            <masBrillante luminosidad="1.77">
+            <masBrillante luminosidad="">
                 <nombreEstrella>Alioth</nombreEstrella>
             </masBrillante>
         </estrellas>
@@ -29,7 +28,7 @@ xsi:noNamespaceSchemaLocation='mapaestelar.xsd'>
         <observacion>
             <hemisferio>Norte</hemisferio>
             <mes>04</mes>
-            <hora>21:00:00</hora>
+            <hora>21:00</hora>
         </observacion>
     </constelacion>
     <estrella>
