@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT mapaEstelar (constelacion,estrella)>
-<!ATTLIST mapaEstelar >
+<!ATTLIST mapaEstelar xmlns:xsi CDATA #IMPLIED
+xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
 <!ELEMENT constelacion (nombreEspanol,superficie,estrellas,objetos,colindantes,observacion)>
 <!ATTLIST constelacion nombreLatin CDATA #REQUIRED>
 <!ELEMENT nombreEspanol (#PCDATA)>
