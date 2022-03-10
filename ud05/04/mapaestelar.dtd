@@ -2,8 +2,8 @@
 <!ELEMENT mapaEstelar (constelacion,estrella)>
 <!ATTLIST mapaEstelar xmlns:xsi CDATA #IMPLIED
 xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
-<!ELEMENT constelacion (nombreEspanol,superficie,estrellas,objetos,colindantes,observacion)>
-<!ATTLIST constelacion nombreLatin CDATA #REQUIRED>
+<!ELEMENT constelacion (#PCDATA|nombreEspanol|superficie|estrellas|objetos|colindantes|observacion)*>
+<!ATTLIST constelacion nombreLatin CDATA #IMPLIED>
 <!ELEMENT nombreEspanol (#PCDATA)>
 <!ELEMENT superficie (#PCDATA)>
 <!ELEMENT estrellas (asterismo,masBrillante)>
@@ -18,13 +18,13 @@ xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
 <!ELEMENT galaxias (#PCDATA)>
 <!ELEMENT cuasares (#PCDATA)>
 <!ELEMENT lluviaDeMeteoros (#PCDATA)>
-<!ELEMENT colindantes (nombre*)>
+<!ELEMENT colindantes (nombre+)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT observacion (hemisferio,mes,hora)>
 <!ELEMENT hemisferio (#PCDATA)>
 <!ELEMENT mes (#PCDATA)>
 <!ELEMENT hora (#PCDATA)>
-<!ELEMENT estrella (nombre,const,distancia,luminosidad,temperatura,masa)>
+<!ELEMENT estrella (nombre,constelacion,distancia,luminosidad,temperatura,masa)>
 <!ELEMENT const (#PCDATA)>
 <!ELEMENT distancia (#PCDATA)>
 <!ATTLIST distancia medida CDATA #FIXED "años luz">

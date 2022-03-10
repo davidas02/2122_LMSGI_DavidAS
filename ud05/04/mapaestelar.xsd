@@ -1,6 +1,10 @@
 <xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="tipoRealPositivo">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:element name="mapaEstelar">
         <xs:complexType>
             <xs:sequence>
@@ -39,9 +43,15 @@
                                                 </xs:attribute>
                                             </xs:complexType>
                                         </xs:element>
-
                                     </xs:sequence>
-                                    <xs:attribute name="numero" type="xs:positiveInteger"/>
+                                    <xs:attribute name="numero">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+                                            <xs:minInclusive value="0"/>
+                                            <xs:maxInclusive value="999"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="objetos">
@@ -51,14 +61,14 @@
                                         <xs:element name="nebulosas" type="xs:boolean" default="false"/>
                                         <xs:element name="galaxias" type="xs:boolean" default="false"/>
                                         <xs:element name="cuasares" type="xs:boolean" default="false"/>
-                                        <xs:element name="lluviaDeMeteoros" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>   
+                                        <xs:element name="lluviaDeMeteoros" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="colindantes">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="nombre" type="xs:string" maxOccurs="unbounded"/>
+                                        <xs:element name="nombre" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -72,14 +82,7 @@
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
-                                        <xs:element name="mes">
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:positiveInteger">
-                                                    <xs:minInclusive value="1"/>
-                                                    <xs:maxInclusive value="12"/>
-                                                </xs:restriction>
-                                            </xs:simpleType>
-                                        </xs:element>
+                                        <xs:element name="mes" type="xs:gMonth"/>
                                         <xs:element name="hora" type="xs:time"/>
                                     </xs:sequence>
                                 </xs:complexType>
@@ -93,30 +96,40 @@
                         <xs:sequence>
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="const" type="xs:string"/>
-                            <xs:element name="distancia" >
+                            <xs:element name="distancia">
                                 <xs:complexType>
                                     <xs:simpleContent>
-                                        <xs:restriction base="xs:float">
-                                            <xs:minInclusive value="0"/>
-                                        </xs:restriction>
+                                        <xs:extension base="tipoRealPositivo">
+                                            <xs:attribute name="medida" type="xs:string" fixed="años luz"/>
+                                        </xs:extension>
                                     </xs:simpleContent>
-                                    <xs:attribute name="medida" type="xs:string" fixed="años luz"/>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="luminosidad" type="xs:positiveInteger">
-                                <xs:complexType mixed="true">
-                                    <xs:attribute name="medida" type="xs:string" default="soles"/>
+                            <xs:element name="luminosidad">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:positiveInteger">
+                                            <xs:attribute name="medida" type="xs:string" default="soles"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="temperatura" type="xs:integer" default="K">
-                                <xs:complexType mixed="true">
-                                    <xs:attribute name="medida" type="xs:string"/>
+                            <xs:element name="temperatura" >
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:positiveInteger">
+                                            <xs:attribute name="medida" type="xs:string" default="K"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="masa" type="xs:positiveInteger">
-                                <xs:complexType mixed="true" >
-                                    
-                                    <xs:attribute name="medida" type="xs:string" default="soles"/>
+                            <xs:element name="masa">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:positiveInteger">
+                                            <xs:attribute name="medida" type="xs:string" default="soles"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>

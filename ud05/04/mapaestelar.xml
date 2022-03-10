@@ -33,7 +33,7 @@
     </constelacion>
     <estrella>
         <nombre>Alioth</nombre>
-        <const>Osa Mayor</const>
+        <constelacion>Osa Mayor</constelacion>
         <distancia medida="años luz">81</distancia>
         <luminosidad medida="soles">108</luminosidad>
         <temperatura medida="K">9400</temperatura>
