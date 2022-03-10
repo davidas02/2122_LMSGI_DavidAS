@@ -1,0 +1,57 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="garaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coches">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="coche" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="matricula">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="([0-9]{4})(A-Z)"></xs:pattern>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="propietario" type="xs:string"/>
+                                        <xs:element name="marca" type="xs:string"/>
+                                        <xs:element name="modelo" type="xs:string"/>
+                                        <xs:element name="color" type="xs:string"/>
+                                        <xs:element name="km" type="xs:positiveInteger"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reparaciones">
+                    <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="reparacion" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="matricula" type="xs:string"></xs:element>
+                                    <xs:element name="descripcion" type="xs:string"/>
+                                    <xs:element name="fecha_entrada" type="xs:string"/>
+                                    <xs:element name="fecha_salida" type="xs:string"/>
+                                    <xs:element name="horas" type="xs:positiveInteger"/>
+                                </xs:sequence>
+                                <xs:attribute name="codigo">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="(J)([0-9]{4})"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

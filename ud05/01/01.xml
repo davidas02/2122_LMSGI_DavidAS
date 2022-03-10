@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<actividades>
+<actividades xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:noNamespaceSchemaLocation='01.xsd'>
   <actividad nivel="infantil">
     <codigo>A01
     </codigo>
@@ -67,7 +68,8 @@
       <minutos_sesion>45
       </minutos_sesion>
       <sesiones_semana>
-      </sesiones_semana>2
+        2
+      </sesiones_semana>
     </sesiones>
   </actividad>
   <actividad nivel="adultos">

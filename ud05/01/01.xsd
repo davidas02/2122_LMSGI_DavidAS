@@ -2,15 +2,45 @@
     <xs:element name="actividades">
         <xs:complexType>
             <xs:sequence>
-
+                <xs:element name="actividad" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="codigo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="([A])([0-9]{*})"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="fecha_inicio" type="xs:date"/>
+                            <xs:element name="sesiones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="minutos_sesion" type="xs:positiveInteger">
+                                        </xs:element>
+                                        <xs:element name="sesiones_semana" type="xs:positiveInteger"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="intensidad">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="suave|moderada|fuerte"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nivel">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="infantil|adultos"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
-            <xs:attribute name="nivel">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="infantil|adultos"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
         </xs:complexType>
     </xs:element>
 </xs:schema>
