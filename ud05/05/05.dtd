@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT horario (grupo+,profesores,asignturas,imparte)>
+<!ELEMENT grupo (hora+)>
+<!ATTLIST grupo codT IDREF #REQUIRED>
+<!ATTLIST grupo nombre ID #REQUIRED>
+<!ELEMENT hora (dia_sem*)>

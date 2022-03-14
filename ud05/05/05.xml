@@ -1,8 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <horario>
-    <fila>
-        <columna>
-        </columna>
-        
-    </fila>
+    <grupo codT="JCIF" nombre="DAW1">
+        <hora entrada="08:30" salida="09:20">
+            <dia_sem dia="lunes" num="2">LMSGI</dia_sem>
+            <dia_sem dia="martes" num="2">EDD</dia_sem>
+            <dia_sem dia="miercoles" num="2">BBDD</dia_sem>
+            <dia_sem dia="jueves" num="2">PROG</dia_sem>
+            <dia_sem dia="viernes" num="2">BBDD</dia_sem>
+        </hora>
+        <hora entrada="09:20" salida="10:10">
+
+        </hora>
+        <hora entrada="10:10" salida="11:00">
+            <dia_sem dia="lunes" num="2">FOL</dia_sem>
+            <dia_sem dia="martes" num="2">BBDD</dia_sem>
+            <dia_sem dia="miercoles" num="2">SIF</dia_sem>
+            <dia_sem dia="jueves" num="2">LMSGI</dia_sem>
+            <dia_sem dia="viernes" num="1">EDD</dia_sem>
+        </hora>
+        <hora entrada="11:25" salida="12:15">
+            <dia_sem dia="viernes" num="1">FOL</dia_sem>
+        </hora>
+        <hora entrada="12:15" salida="13:05">
+            <dia_sem dia="lunes" num="2">SIF</dia_sem>
+            <dia_sem dia="martes" num="2">PROG</dia_sem>
+            <dia_sem dia="miercoles" num="2">PROG</dia_sem>
+            <dia_sem dia="jueves" num="2">SIF</dia_sem>
+            <dia_sem dia="viernes" num="2">PROG</dia_sem>
+        </hora>
+        <hora entrada="13:05" salida="13:55">
+
+        </hora>
+    </grupo>
+    <asignaturas>
+        <asignatura codigo="LMSGI">Lenguaje de Marcas y Gestion de la Informacion</asignatura>
+        <asignatura codigo="BBDD">Bases de Datos</asignatura>
+        <asignatura codigo="PROG">Programacion</asignatura>
+        <asignatura codigo="SIF">Sistemas Infromaticos</asignatura>
+        <asignatura codigo="EDD">Entornos de Desarrollo</asignatura>
+        <asignatura codigo="FOL">Formación y Orientacion Laboral</asignatura>
+    </asignaturas>
+    <profesores>
+        <profesor codigo="ARIF">
+            Amor Rodríguez Navarro
+        </profesor>
+        <profesor codigo="MELI">
+            Meli Ramos Osorio
+        </profesor>
+        <profesor codigo="AMB">
+            Ambrosio Casado Fernández
+        </profesor>
+        <profesor codigo="VSIF">
+            Valter Jorge de Sousa Raposo
+        </profesor>
+        <profesor codigo="JCIF">
+            Javier Coque García
+        </profesor>
+        <profesor codigo="MGFO">
+            Maria Enriqueta Gonzalez Carnero
+        </profesor>
+    </profesores>
+    <imparte>
+        <asignatura codM="LMSGI" codP="ARIF MELI"/>
+        <asignatura codM="BBDD" codP="MELI"/>
+        <asignatura codM="PROG" codP="AMB" />
+        <asignatura codM="SIF" codP="VSIF"/>
+        <asignatura codM="EDD" codP="JCIF"/>
+        <asignatura codM="FOL" codP="MGFO"/>
+    </imparte>
+
 </horario>
