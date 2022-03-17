@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<horario nombre_ciclo="DAW" curso="1" anyo="2021-2022">
+    <horas>
+        <hora hora_entrada="08:30:00" hora_salida="09:20:00">
+            <dia_sem dia="Lunes" numhoras="2">LMSGI</dia_sem>
+            <dia_sem dia="Martes" numhoras="2">EDD</dia_sem>
+            <dia_sem dia="Miercoles" numhoras="2">BBDD</dia_sem>
+            <dia_sem dia="Jueves" numhoras="2">PROG</dia_sem>
+            <dia_sem dia="Viernes" numhoras="2">BBDD</dia_sem>
+        </hora>
+        <hora hora_entrada="10:10:00" hora_salida="11:00:00">
+            <dia_sem dia="Lunes" numhoras="2">FOL</dia_sem>
+            <dia_sem dia="Martes" numhoras="2">BBDD</dia_sem>
+            <dia_sem dia="Miercoles" numhoras="2">SINF</dia_sem>
+            <dia_sem dia="Jueves" numhoras="2">LMSGI</dia_sem>
+            <dia_sem dia="Viernes" numhoras="1">EDD</dia_sem>
+        </hora>
+        <hora hora_entrada="11:25:00" hora_salida="12:15:00">
+            <dia_sem dia="Viernes" numhoras="1">FOL</dia_sem>
+        </hora>
+        <hora hora_entrada="12:15:00" hora_salida="13:05:00">
+            <dia_sem dia="Lunes" numhoras="2">SINF</dia_sem>
+            <dia_sem dia="Martes" numhoras ="2">PROG</dia_sem>
+            <dia_sem dia="Miercoles" numhoras="2">PROG</dia_sem>
+            <dia_sem dia="Jueves" numhoras="2">SINF</dia_sem>
+            <dia_sem dia="Viernes" numhoras="2">PROG</dia_sem>
+        </hora>
+        <hora hora_entrada="13:05:00" hora_salida="13:55:00"></hora>
+    </horas>
+    <imparte>
+        <asignatura cod="PROG" prof_impar="ACF"/>
+        <asignatura cod="EDD" prof_impar="JCG"/>
+        <asignatura cod="FOL" prof_impar="MEGC"/>
+        <asignatura cod="SINF" prof_impar="VJDSR"/>
+        <asignatura cod="LMSGI" prof_impar="ARN HRO"/>
+        <asignatura cod="BBDD" prof_impar="HRO"/>
+    </imparte>
+    <asignaturas>
+        <asignatura cod="PROG">PROGRAMACIÓN</asignatura>
+        <asignatura cod="EDD">ENTORNOS DE DESARROLLO</asignatura>
+        <asignatura cod="FOL">FORMACION Y ORIENTACIÓN LABORAL</asignatura>
+        <asignatura cod="SINF">SISTEMAS INFORMÁTICOS</asignatura>
+        <asignatura cod="LMSGI">LENGUAJE DE MARCAS Y SISTEMAS DE GESTIÓN DE LA INFORMACIÓN</asignatura>
+        <asignatura cod="BBDD">BASES DE DATOS</asignatura>
+    </asignaturas>
+    <profesores>
+        <profesor codigo="ACF">
+            <nombre>AMBROSIO</nombre>
+            <apellido1>CASADO</apellido1>
+            <apellido2>FERNANDEZ</apellido2>
+        </profesor>
+        <profesor codigo="ARN">
+            <nombre>AMOR</nombre>
+            <apellido1>RODRIGUEZ</apellido1>
+            <apellido2>NAVARRO</apellido2>
+        </profesor>
+        <profesor codigo="JCG" tutor="true">
+            <nombre>JAVIER</nombre>
+            <apellido1>COQUE</apellido1>
+            <apellido2>GARCÍA</apellido2>
+        </profesor>
+        <profesor codigo="HRO">
+            <nombre>HERMELINDA</nombre>
+            <apellido1>RAMOS</apellido1>
+            <apellido2>OSORIO</apellido2>
+        </profesor>
+        <profesor codigo="MEGC">
+            <nombre>MARIA ENRIQUETA</nombre>
+            <apellido1>GONZALEZ</apellido1>
+            <apellido2>CARNERO</apellido2>
+        </profesor>
+        <profesor codigo="VJDSR">
+            <nombre>VALTER JORGE</nombre>
+            <apellido1>DE SOUSA</apellido1>
+            <apellido2>RAPOSO</apellido2>
+        </profesor>
+    </profesores>
+</horario>
