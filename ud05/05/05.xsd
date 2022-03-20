@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="horario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="grupo">
+                    <xs:complexType>
+                        <xs:sequence>
+                        <xs:element name="hora" maxOccurs="6">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="dia_sem" minOccurs="0" maxOccurs="5">
+                                        <xs:complexType mixed="true">
+                                            <xs:attribute name="dia">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:pattern value="lunes|martes|miercoles|jueves|viernes"></xs:pattern>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                            <xs:attribute name="num">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:integer">
+                                                        <xs:maxInclusive value="3"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="entrada" type="xs:time"/>
+                                <xs:attribute name="salida" type="xs:time"/>
+                            </xs:complexType>
+                        </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codT" type="xs:IDREF"/>
+                        <xs:attribute name="nombre" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="asignaturas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="asignatura" maxOccurs="unbounded">
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="codigo" type="xs:ID"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="profesores">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="profesor" minOccurs="1"  maxOccurs="unbounded">
+                            <xs:complexType mixed="true">
+                                <xs:attribute name="codigo" type="xs:ID"/> 
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+                </xs:element>
+                <xs:element name="imparte">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="asignatura" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:attribute name="codM" type="xs:IDREF"/>
+                            <xs:attribute name="codP" type="xs:IDREFS"/>
+                        </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

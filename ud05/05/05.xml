@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<horario>
+<?xml-model href="05.dtd" type="application/xml-dtd"?>
+<?xml-model href="05.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<horario >
     <grupo codT="JCIF" nombre="DAW1">
-        <hora entrada="08:30" salida="09:20">
+        <hora entrada="08:30:00" salida="09:20:00">
             <dia_sem dia="lunes" num="2">LMSGI</dia_sem>
             <dia_sem dia="martes" num="2">EDD</dia_sem>
             <dia_sem dia="miercoles" num="2">BBDD</dia_sem>
             <dia_sem dia="jueves" num="2">PROG</dia_sem>
             <dia_sem dia="viernes" num="2">BBDD</dia_sem>
         </hora>
-        <hora entrada="09:20" salida="10:10">
+        <hora entrada="09:20:00" salida="10:10:00">
 
         </hora>
-        <hora entrada="10:10" salida="11:00">
+        <hora entrada="10:10:00" salida="11:00:00">
             <dia_sem dia="lunes" num="2">FOL</dia_sem>
             <dia_sem dia="martes" num="2">BBDD</dia_sem>
             <dia_sem dia="miercoles" num="2">SIF</dia_sem>
             <dia_sem dia="jueves" num="2">LMSGI</dia_sem>
             <dia_sem dia="viernes" num="1">EDD</dia_sem>
         </hora>
-        <hora entrada="11:25" salida="12:15">
+        <hora entrada="11:25:00" salida="12:15:00">
             <dia_sem dia="viernes" num="1">FOL</dia_sem>
         </hora>
-        <hora entrada="12:15" salida="13:05">
+        <hora entrada="12:15:00" salida="13:05:00">
             <dia_sem dia="lunes" num="2">SIF</dia_sem>
             <dia_sem dia="martes" num="2">PROG</dia_sem>
             <dia_sem dia="miercoles" num="2">PROG</dia_sem>
             <dia_sem dia="jueves" num="2">SIF</dia_sem>
             <dia_sem dia="viernes" num="2">PROG</dia_sem>
         </hora>
-        <hora entrada="13:05" salida="13:55">
+        <hora entrada="13:05:00" salida="13:55:00">
 
         </hora>
     </grupo>

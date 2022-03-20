@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT horario (grupo+,profesores,asignturas,imparte)>
+<!ELEMENT horario (grupo+,asignaturas,profesores,imparte)>
 <!ELEMENT grupo (hora+)>
 <!ATTLIST grupo codT IDREF #REQUIRED>
 <!ATTLIST grupo nombre ID #REQUIRED>
 <!ELEMENT hora (dia_sem*)>
+<!ATTLIST hora entrada CDATA #REQUIRED>
+<!ATTLIST hora salida CDATA #REQUIRED>
+<!ELEMENT dia_sem (#PCDATA)>
+<!ATTLIST dia_sem dia CDATA #REQUIRED>
+<!ATTLIST dia_sem num CDATA #REQUIRED>
+<!ELEMENT asignaturas (asignatura+)>
+<!ELEMENT asignatura (#PCDATA)>
+<!ATTLIST asignatura codigo ID #IMPLIED>
+<!ELEMENT profesores (profesor*)>
+<!ELEMENT profesor (#PCDATA)>
+<!ATTLIST profesor codigo ID #REQUIRED>
+<!ELEMENT imparte (asignatura*)>
+<!ATTLIST asignatura codM IDREF #IMPLIED>
+<!ATTLIST asignatura codP IDREFS #IMPLIED>
