@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>
+            RSS David Aparicio Sir
+        </title>
+        <link>
+            https://daw105.ieslossauces.es
+        </link>
+        <description>
+            RSS con la actualidad del indice de practicas del
+            alumno David Aparicio
+        </description>
+        <language>
+            es-es
+        </language>
+        <item>
+            <title>
+               Creacion Index 
+            </title>
+            <link>
+                https://daw105.ieslossauces.es 
+            </link>
+            <description>
+                Creacion del archivo index principal
+            </description>
+            <guid isPermaLink="true">
+                https://daw105.ieslossauces.es 
+            </guid>
+            <source>
+                https://daw105.ieslossauces.es 
+            </source>
+        </item>
+        <item>
+            <title>
+              Creacion Index HTML
+            </title>
+            <link>
+                https://daw105.ieslossauces.es/ud02/index.html
+            </link>
+            <description>
+                Creacion del archivo index principal del tema 2
+                sobre HTML y CSS
+            </description>
+            <guid isPermaLink="true">
+                https://daw105.ieslossauces.es/ud02/index.html
+            </guid>
+            <source>
+                https://daw105.ieslossauces.es/ud02/index.html
+            </source>
+        </item>
+        <item>
+            <title>
+               Creacion Index RSS
+            </title>
+            <link>
+                https://daw105.ieslossauces.es/ud03/index.html
+            </link>
+            <description>
+                Creacion del archivo index principal del tema 3 sobre RSS
+            </description>
+            <guid isPermaLink="true">
+                https://daw105.ieslossauces.es/ud03/index.html
+            </guid>
+            <source>
+                https://daw105.ieslossauces.es/ud03/index.html
+            </source>
+        </item>
+        <item>
+            <title>
+              Creacion Index XML
+            </title>
+            <link>
+                https://daw105.ieslossauces.es/ud04/index.html
+            </link>
+            <description>
+                Creacion del archivo index principal del tema 4 
+                sobre XML
+            </description>
+            <guid isPermaLink="true">
+                https://daw105.ieslossauces.es/ud04/index.html
+            </guid>
+            <source>
+                https://daw105.ieslossauces.es/ud04/index.html
+            </source>
+        </item>
+        <item>
+            <title>
+              Creacion Index XPATH
+            </title>
+            <link>
+                https://daw105.ieslossauces.es/ud05/index.html
+            </link>
+            <description>
+                Creacion del archivo index principal del tema 5 XPATH
+            </description>
+            <guid isPermaLink="true">
+                https://daw105.ieslossauces.es/ud05/index.html
+            </guid>
+            <source>
+                https://daw105.ieslossauces.es/ud05/index.html
+            </source>
+        </item>
+    </channel>
+</rss>
