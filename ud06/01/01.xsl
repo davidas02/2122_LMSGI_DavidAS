@@ -8,20 +8,24 @@
     </head>
     <body>
         <xsl:apply-templates select="vivienda"/>
+        <p>  
+            Numero de viviendas: <xsl:value-of select="count(vivienda)"/>
+        </p>
+        <p>Numero de vecinos: <xsl:value-of select="count(//nombre)"/>
+        </p>
     </body>
 </html>
 </xsl:template>
 <xsl:template match="vivienda">
    <xsl:value-of select="concat('Piso:',piso,' Puerta:',puerta)"/> 
    <ol>
-        <xsl:apply-templates select="vecinos"/>
+        <xsl:apply-templates select="vecinos/nombre"/>
    </ol>
    
 </xsl:template>
-<xsl:template match="vecinos">
-    <li><xsl:apply-templates select="nombre"/></li>
-</xsl:template>
-<xsl:template match="nombre">
-    <xsl:value-of select="nombre"/>
+<xsl:template match="vecinos/nombre">
+        <li>
+            <xsl:apply-templates select="current() /text()"/>
+        </li>
 </xsl:template>
 </xsl:stylesheet>
