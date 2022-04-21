@@ -9,7 +9,7 @@
             </head>
             <body>
                 <header>
-                    <h1>Informacioacute;n de tickets</h1>
+                    <h1>Información de tickets</h1>
                 </header>
                 <xsl:apply-templates select="ticket"/>
                 <div>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Autor .- Nombre y Apellidos -->
+<!-- Fecha.- Lunes 20 de abril de 2020 -->
+<!-- Descripcion .- Listado de tickets -->
+<peliculas>
+    <pelicula>
+        <nombre>La invenci&#243;n de Hugo</nombre>
+        <valoracion puntos="5"/>
+        <publico>Todos los p&#250;blicos</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>La piel que habito</nombre>
+        <valoracion puntos="3"/>
+        <publico>Adultos</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>Los descencientes</nombre>
+        <valoracion puntos="4"/>
+        <publico>Mayores de 12</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>Como entrenar a tu dragón</nombre>
+        <valoracion puntos="4"/>
+        <publico>Todos los p&#250;blicos</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>Salvar al soldado Ryan</nombre>
+        <valoracion puntos="3"/>
+        <publico>Adultos</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>Bienvenidos al norte</nombre>
+        <valoracion puntos="5"/>
+        <publico>Todos los p&#250;blicos</publico>
+    </pelicula>
+    <pelicula>
+        <nombre>Lucia y el sexo</nombre>
+        <valoracion puntos="2"/>
+        <publico>Adultos</publico>
+    </pelicula>
+</peliculas>
