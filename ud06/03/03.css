@@ -1,12 +1,37 @@
 
+h1{
+    position: static;
+}
 footer,h1{
 
     background-color: gray;
     color: white;
     text-align: center;
 }
+footer{
+    bottom: auto;
+}
+#peliculas{
+    background-image: url("img/carrete.png");
+    background-repeat: repeat;
+    size: 300px;
+}
 .pelicula{
     border:1px;
     border-color: black;
     border-style: solid;
+    width: 29%;
+    margin-bottom: 1%;
+    display: inline-block;
+    align-items: center;
+    background-color: white;
+}
+.alta{
+    color: green;
+}
+.media{
+    color: yellow;
+}
+.baja{
+    color: red;
 }

@@ -11,6 +11,7 @@
             <meta charset="UTF-8"/>
             <title>03 XSLT David Aparicio</title>
             <link href="03.css"  rel="stylesheet"  type="text/css" />
+            <link rel="icon" href="/images/favicon/favicon.ico" type="image/ico" />
         </head>
         <body>
             <h1>Informacion de peliculas</h1>
@@ -22,10 +23,11 @@
             <div id="peliculas">
                 <xsl:apply-templates select="//pelicula"/>
             </div>
-            <footer>
-                <xsl:value-of select="concat('Numero total de peliculas: ',count(peliculas/pelicula))"/>
-            </footer>
+            
         </body>
+        <footer>
+            <xsl:value-of select="concat('Numero total de peliculas: ',count(peliculas/pelicula))"/>
+        </footer>
     </html>
 </xsl:template>
 <xsl:template match="//pelicula">
@@ -35,19 +37,29 @@
     </p>
     <p>
         Puntuacion:
-        <xsl:when test="valoracion/@puntos=1||valoracion/@puntos=2">
-        <xsl:value-of select=" MUY BAJA"/>
+       <xsl:choose>
+           <xsl:when test="valoracion/@puntos&lt;=2">
+            <p class="baja"><xsl:text>BAJA</xsl:text></p>
         </xsl:when>
-        <xsl:when test="valoracion/@puntos=3||valoracion/@puntos=4">
-        <xsl:value-of select=" MEDIA"/>
-        </xsl:when>
-        <xsl:when test="valoracion/@puntos &lt;=5">
-        <xsl:value-of select=" ALTA"/>
-        </xsl:when>
-        <xsl:value-of select="concat('Puntuacion: ',valoracion/@puntos)"/>
+        <xsl:otherwise>
+            <xsl:choose>
+                <xsl:when test="valoracion/@puntos&gt;=5">
+                    <p class="alta"><xsl:text>ALTA</xsl:text></p>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="valoracion/@puntos&gt;=3">
+                            <p class="media"><xsl:text>MEDIA</xsl:text></p>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:otherwise>
+        </xsl:choose>
+        </xsl:otherwise>
+       </xsl:choose>
     </p>
     <p>
     <xsl:value-of select="nombre"/>
     </p>
-</div></xsl:template>
+    </div>
+</xsl:template>
 </xsl:stylesheet>
