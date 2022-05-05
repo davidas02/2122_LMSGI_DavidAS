@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="02.xsl"?>
 <?xml-model href="02.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <listatickets>
 <!-- Autor .- Nombre y Apellidos -->

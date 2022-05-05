@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><listatickets>
+    <ticket numero="7483" fecha="2012-01-20" hora="22:00:00">
+        <producto>
+            <nombre>Agua</nombre>
+            <precio>0.60</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <total>1.60</total>
+    </ticket>
+    <ticket numero="7484" fecha="2012-01-21" hora="22:05:00">
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <total>2.00</total>
+    </ticket>
+</listatickets>
