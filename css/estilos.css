@@ -81,12 +81,13 @@ main {
 }
 #titulo{
   position: fixed;
-  left: 0%;
-  top: 48px;
+  left: 15%;
+  top: 0px;
   width: 100%;
   padding: 5px 0px 0px 0px;
   height: 47px;
   text-align: center;
+ 
 }
 #lista {
   position: absolute;
@@ -124,6 +125,9 @@ main {
   width: 33%;
   height: 33%;
 }
+.fila :last-child{
+  margin-bottom: 50px;
+}
 .columna {
   padding: 2%;
   width: 50%;
@@ -131,6 +135,13 @@ main {
   size: 450px;
   margin-left: 10px;
   margin-right: 10px;
+}
+.columna a{
+  text-decoration: none;
+  color: #000;
+}
+.columna a img{
+  padding: 10px;
 }
 .columna:after {
   content: "";

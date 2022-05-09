@@ -25,6 +25,7 @@
                             <div>
                                 <xsl:value-of select="concat(@id,'. ',enunciado)"/>
                                 <xsl:for-each select="respuestas/respuesta">
+                                <div class="respuesta">
                                     <label>
                                         <input type="radio" name="pregunta">
                                             <xsl:attribute name="id">
@@ -49,6 +50,8 @@
                                         </input>
                                         <xsl:value-of select="current()"/>
                                     </label>
+                                </div>
+                                    
                                 </xsl:for-each>
                             </div>
                         </fieldset>

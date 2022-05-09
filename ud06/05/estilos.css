@@ -1,3 +1,18 @@
-label{
+.respuesta{
     display: block;
+    margin-top: 1px;
+    border: dotted 1px black;
+}
+.respuesta:hover{
+    display: block;
+    border: dotted 1px black;
+    
+    background-color: gray;
+}
+form{
+    background-color: gray;
+    padding: 5px;
+}
+fieldset{
+    background-color: white;
 }

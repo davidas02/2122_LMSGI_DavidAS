@@ -1,0 +1,32 @@
+html{
+    font-family: 'Permanent Marker', cursive;
+}
+h1{
+   color:#ffffff;
+   background-color: #387ab6;
+   
+}
+table{
+   border:solid 1px black;
+   width: 60%;
+}
+td{
+   width: 50%;
+}
+thead{
+   color:#ffffff;
+   background-color: #387ab6;
+   
+}
+#matricula{
+   text-align: center;
+}
+.tabla{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.total{
+   color:#ffffff;
+   background-color: #387ab6;
+}

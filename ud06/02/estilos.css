@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 abr. 2022, 9:06:16
+    Author     : daw1
+*/
+
+h1{
+    color:green;
+    background-color: grey;
+}
+h2, .global{
+    color:grey;
+    background-color:green;
+}
+.global{
+    text-align: right;
+}
+.fecha{
+    color:green;
+    font-style: oblique;
+}
+.numeroticket{
+    color:green;
+    border: solid 1px greenyellow;
+}
+.tabla{
+    text-align:  center;
+}
