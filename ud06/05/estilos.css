@@ -1,9 +1,14 @@
-.respuesta{
+.respuestaI{
     display: block;
     margin-top: 1px;
     border: dotted 1px black;
 }
-.respuesta:hover{
+.respuestaC{
+    display: block;
+    margin-top: 1px;
+    border: dotted 1px black;
+}
+.respuestaI:hover{
     display: block;
     border: dotted 1px black;
     
@@ -15,4 +20,7 @@ form{
 }
 fieldset{
     background-color: white;
+}
+.enunciado{
+    font-weight: bolder;
 }
